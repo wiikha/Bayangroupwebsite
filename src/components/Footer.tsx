@@ -1,69 +1,66 @@
 "use client";
 
-import {
-  FaFacebook,
-  FaInstagram,
-  FaGithub,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaGithub, FaYoutube } from "react-icons/fa";
 import { FiScissors } from "react-icons/fi";
-import { useTranslations } from "use-intl";
+import { useTranslations } from "next-intl"; // ← use next-intl for consistency
+import Link from "next/link";
 
 export default function Footer() {
   const t = useTranslations("footer");
+
   return (
     <footer className="bg-white rounded-lg m-4">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 flex flex-col items-center text-center">
-        
-        {/* Top links */}
+
+        {/* Top links (INTERNAL) */}
         <ul className="flex flex-wrap justify-center mb-6 text-sm font-medium" style={{ color: "#495062" }}>
           <li>
-            <a href="/aboutus" className="mr-4 hover:underline md:mr-6">
+            <Link href="/aboutus" className="mr-4 hover:underline md:mr-6">
               {t("about")}
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/companies" className="mr-4 hover:underline md:mr-6">
+            <Link href="/companies" className="mr-4 hover:underline md:mr-6">
               {t("companies")}
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/tech" className="mr-4 hover:underline md:mr-6">
+            <Link href="/tech" className="mr-4 hover:underline md:mr-6">
               {t("tech")}
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/news" className="mr-4 hover:underline md:mr-6">
+            <Link href="/news" className="mr-4 hover:underline md:mr-6">
               {t("news")}
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/vacancies" className="mr-4 hover:underline md:mr-6">
+            <Link href="/vacancies" className="mr-4 hover:underline md:mr-6">
               {t("vacancies")}
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contacts" className="hover:underline">
+            <Link href="/contacts" className="hover:underline">
               {t("contacts")}
-            </a>
+            </Link>
           </li>
         </ul>
 
-        {/* Social icons */}
+        {/* Social icons (EXTERNAL) — keep <a>, add target/rel if real links */}
         <div className="flex space-x-6 mb-6" style={{ color: "#495062" }}>
-          <a href="#" className="hover:text-gray-900">
+          <a href="#" className="hover:text-gray-900" aria-label="Facebook">
             <FaFacebook size={20} />
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="#" className="hover:text-gray-900" aria-label="Instagram">
             <FaInstagram size={20} />
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="#" className="hover:text-gray-900" aria-label="Website">
             <FiScissors size={20} />
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="#" className="hover:text-gray-900" aria-label="GitHub">
             <FaGithub size={20} />
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="#" className="hover:text-gray-900" aria-label="YouTube">
             <FaYoutube size={20} />
           </a>
         </div>
