@@ -94,7 +94,7 @@
             },
             "map": {
               "title": "Bayan Group location",
-              "embedSrc": "https://www.openstreetmap.org/export/embed.html?bbox=69.233%2C41.293%2C69.310%2C41.345&layer=mapnik&marker=41.318%2C69.273"
+              "embedSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.554098913431!2d69.30044287627643!3d41.34030857130591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef535b2a72dd3%3A0xcd1469d3ed4f9c9b!2z0J7QntCeICJCQVlBTiBNRURJQ0FMIg!5e0!3m2!1sen!2s!4v1755290212774!5m2!1sen!2s"
             }
           },
 
@@ -184,6 +184,8 @@
             "title": "Our Technologies",
             "subtitle": "We improve medicines through advanced technologies and a science-driven approach.",
             "heading": "Innovational technologies",
+            "line1": "1st Line",
+            "line2": "2nd Line",
             "subheading": "We improve medicines through advanced technologies and a science-driven approach.",
             "text_first_bayan": "BAYAN MEDICAL operates a modern pharmaceutical plant specializing in the production of sterile injectable solutions in glass ampoules ranging from 1 ml to 10 ml. The manufacturing facilities include two automated lines with terminal sterilization, each capable of producing up to 500 ampoules per minute. With single-shift operations, the annual capacity exceeds 16 million packs. All processes comply with GMP standards and are carried out in clean rooms of classes “A,” “C,” and “D.” The facility is equipped with high-tech machinery from China and has its own laboratories for quality control. Advanced engineering systems, water treatment, process automation, and highly qualified personnel ensure the stable production of safe and effective products.",
             "text_second_bayan": "BAYAN MEDICAL is designed for manufacturing sterile injectable solutions in glass ampoules ranging from 1 ml to 10 ml. The production process includes: washing and depyrogenation of ampoules, solution preparation, filtration, filling, sealing, sterilization, inspection, and packaging. The line is located in a clean room complex of classes “C” and “A”, equipped with a ventilation system featuring H14-class HEPA filters and controls for pressure, temperature, and humidity. All processes comply with GMP standards. Quality control is carried out at every stage. Personnel receive regular training and certification.",

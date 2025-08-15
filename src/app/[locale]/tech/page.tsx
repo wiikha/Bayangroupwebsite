@@ -119,11 +119,11 @@ export default function Technology() {
               />
             </div>
             <div >
-            <h3 className="md:mt-15 mt-3 md:text-[35px] text-[20px] font-semibold">1-LINIYA</h3>
+            <h3 className="md:mt-15 mt-3 md:text-[35px] text-[20px] font-semibold"> {t("line1")} </h3>
             <p className="text-sm text-[#1B2337]/80"> {t("text_second_bayan")} </p>
             </div>
             <div >
-            <h3 className="md:mt-5 mt-3 md:text-[35px] text-[20px] font-semibold">2-LINIYA</h3>
+            <h3 className="md:mt-5 mt-3 md:text-[35px] text-[20px] font-semibold"> {t("line2")} </h3>
             <p className="text-sm text-[#1B2337]/80"> {t("text_third_bayan")} </p>
             </div>            
             <div>

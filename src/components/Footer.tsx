@@ -18,32 +18,32 @@ export default function Footer() {
         {/* Top links */}
         <ul className="flex flex-wrap justify-center mb-6 text-sm font-medium" style={{ color: "#495062" }}>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <a href="/aboutus" className="mr-4 hover:underline md:mr-6">
               {t("about")}
             </a>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <a href="/companies" className="mr-4 hover:underline md:mr-6">
               {t("companies")}
             </a>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <a href="/tech" className="mr-4 hover:underline md:mr-6">
               {t("tech")}
             </a>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <a href="/news" className="mr-4 hover:underline md:mr-6">
               {t("news")}
             </a>
           </li>
           <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
+            <a href="/vacancies" className="mr-4 hover:underline md:mr-6">
               {t("vacancies")}
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline">
+            <a href="/contacts" className="hover:underline">
               {t("contacts")}
             </a>
           </li>

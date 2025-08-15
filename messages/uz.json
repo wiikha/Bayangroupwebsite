@@ -147,6 +147,8 @@
             "title": "Bizning texnologiyalarimiz",
             "subtitle": "Biz texnologiyalar va ilmiy yondashuv orqali dori vositalarini yanada samarali qilish ustida ishlaymiz.",
             "heading": "Innovatsion texnologiyalar",  
+            "line1": "1-LINIYA",
+            "line2": "2-LINIYA",
             "subheading": "Sifatli mahsulotlar va bozorda yetakchilikning asosiy omili",
             "text_first_bayan": "BAYAN MEDICAL kompaniyasi 1 ml dan 10 ml gacha hajmdagi shisha ampulalarda steril inʼyeksion eritmalar ishlab chiqarishga ixtisoslashgan zamonaviy farmatsevtika zavodiga ega. Ishlab chiqarish quvvatlari yakuniy sterilizatsiya bilan jihozlangan ikkita avtomatlashtirilgan liniyani o‘z ichiga oladi, ularning har biri daqiqasiga 500 tagacha ampula ishlab chiqarish imkoniyatiga ega. Bir smenali ishlash sharoitida yillik ishlab chiqarish quvvati 16 milliondan ortiq o‘ramni tashkil etadi. Barcha jarayonlar GMP standartlariga muvofiq amalga oshiriladi va “A”, “C” hamda “D” toifali toza xonalarda olib boriladi. Korxona Xitoydan olib kelingan yuqori texnologiyali uskunalar bilan jihozlangan hamda sifat nazorati uchun o‘z laboratoriyalariga ega. Zamonaviy muhandislik tizimlari, suv tayyorlash uskunalari, jarayonlarni avtomatlashtirish va malakali mutaxassislar xavfsiz va samarali mahsulotning barqaror ishlab chiqarilishini taʼminlaydi.",
             "text_second_bayan": "BAYAN MEDICAL zavodining birinchi liniyasi 1 ml dan 10 ml gacha hajmdagi shisha ampulalarda steril inʼyeksion eritmalar ishlab chiqarishga mo‘ljallangan. Ishlab chiqarish jarayonlari quyidagilarni o‘z ichiga oladi: ampulalarni yuvish va depirolizatsiya qilish, eritma tayyorlash, filtratsiya, to‘ldirish, yopish, sterilizatsiya, inspeksiya va qadoqlash. Liniya “C” va “A” toifali toza xonalar majmuasida joylashgan bo‘lib, H14 sinfidagi HEPA filtrlari va bosim, harorat hamda namlikni nazorat qilish tizimiga ega ventilyatsiya uskunalari bilan jihozlangan. Barcha jarayonlar GMP standartlariga muvofiq amalga oshiriladi. Sifat nazorati har bir bosqichda olib boriladi. Xodimlar muntazam ravishda o‘qitiladi va attestatsiyadan o‘tkaziladi.",
@@ -210,7 +212,7 @@
           },
           "map": {
             "title": "Bayan Group joylashuvi",
-            "embedSrc": "https://www.openstreetmap.org/export/embed.html?bbox=69.233%2C41.293%2C69.310%2C41.345&layer=mapnik&marker=41.318%2C69.273"
+            "embedSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.554098913431!2d69.30044287627643!3d41.34030857130591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef535b2a72dd3%3A0xcd1469d3ed4f9c9b!2z0J7QntCeICJCQVlBTiBNRURJQ0FMIg!5e0!3m2!1sen!2s!4v1755290212774!5m2!1sen!2s"
           }
         },
 
