@@ -32,14 +32,14 @@ export default function Ourvalues() {
                    className="text-white font-extrabold leading-[1.05] tracking-tight
                               text-4xl sm:text-5xl md:text-[80px]"
                  >
-                   {t("title")}
+
                  </h1>
      
                  <p
                    className="mt-4 text-white/85 max-w-2xl
                               text-sm sm:text-base md:text-lg"
                  >
-                   {t("subtitle")}
+    
                  </p>
                </div>
              </div>
