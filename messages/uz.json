@@ -1,0 +1,370 @@
+{
+    "site": {
+      "name": "Bayan Group",
+      "description": "Bayan Group — O‘zbekistonda ikkita zavodga ega farmatsevtika xoldingi: Bayan Medical va SEEM."
+    },
+    "nav": {
+      "home": "Bosh sahifa",
+      "aboutus": "Biz haqimizda",
+      "bayan": "Bayan Group",
+      "directors": "Direktorlar kengashi",
+      "values": "Qadriyatlarimiz",
+      "ourcompanies": "Kompaniyalarimiz",
+      "ourteam": "Jamoamiz",
+      "careers": "Karyera",
+      "technology": "Texnologiya",
+      "news": "Yangiliklar",
+      "contacts": "Bog'lanish",
+      "vacancies": "Vakansiyalar"
+    },
+    "footer": {
+      "navigation": "Navigatsiya",
+      "about": "Biz haqimizda",
+      "companies": "Kompaniyalar",
+      "tech": "Texnologiyalar",
+      "contacts": "Bog'lanish",
+      "news": "Yangiliklar",
+      "vacancies":"Vakansiyalar",
+      "email": "info@bayangroup.uz",
+      "phone": "+998 (00) 000-00-00",
+      "address": "Toshkent, O‘zbekiston",
+      "copy": "© {year} Bayan Group"
+
+    },
+
+      "about": {
+        "hero_title": "Biz haqimizda",
+        "hero_subtitle": "Biz — sog‘liqni saqlash sohasida ishonchli yechimlar taklif etuvchi innovatsion farmatsevtika kompaniyasimiz.",
+        "eyebrow": "Biz haqimizda",
+        "title": {
+          "line1": "Bayan Group"
+        },
+        "info": {
+          "title": "Kompaniya haqida",
+          "body": "Bayan Group — bir nechta muvaffaqiyatli kompaniyalarni birlashtirgan, farmatsevtika sohasida yetakchi o‘rin egallagan holding. Biz dorilarni ishlab chiqarish, import qilish va tarqatishda yuqori sifat, ishonchlilik hamda samaradorlikka e’tibor qaratamiz. Zamonaviy texnologiyalar, xalqaro standartlarga mos ishlab chiqarish jarayonlari va global hamkorlik bizning ustunligimizdir. Bayan Group aholini innovatsion va sifatli dori vositalari bilan ta’minlab, sog‘lom kelajak yaratishga intiladi. Biz bilan hamkorlik — bu nafaqat sifat va ishonch, balki barqaror o‘sish va yangi imkoniyatlar garovidir."
+        },
+        "info2": {
+          "title": "Kompaniya asoschisi",
+          "body": " Ulug'bek Mamatqulov (1979-yil 15-fevral, Urgut tumani, Samarqand viloyati, O'zbekiston) - o'zbekistonlik tadbirkor, Bayan Group kompaniyalar guruhining asoschisi va rahbari. U farmatsevtika, ishlab chigarish va dori vositalari distribyutsiyasi sohalarida faoliyat yuritadi."
+        },
+        "info3":{
+          "title": "Bayan Group tarixi",
+          "body": "2012-yildan boshlab 'Samarkand England Eco-Medical' qo'shma korxonasining aksiyadori sifatida faoliyat yuritmoqda. 2020-yilda Toshkent shahridagi farmatsevtika zavodini sotib olib, unga 'Bayan Medical' nomini berdi. 2023-yilda mazkur korxona 'Samarkand England Eco-Medical' bilan birlashtirilib, 'Bayan Group' kompaniyalar guruhi shakllantirildi."
+           },
+        "partnereyebrow": "HAMKORLARIMIZ",
+        "partnertitle": "Binzning hamkorlarimiz",
+        "images": {
+          "lab": { "alt": "Laboratoriya tadqiqotlari va sifat nazorati" },
+          "engineer": { "alt": "Ishlab chiqarish liniyasida operator" }
+        },
+
+
+            "eyebrow_2": "Yutuqlarimiz",
+            "title_2": "Bizning yutuqlarimiz",
+            "y2010": "2010-yilda kompaniya birinchi mahsulotini ishlab chiqardi.",
+            "y2011": "2011-yilda yangi ishlab chiqarish liniyasi ochildi.",
+            "y2012": "2012-yilda xalqaro sifat sertifikatlari olindi.",
+            "y2013": "2013-yilda eksport faoliyati boshlandi.",
+            "y2014": "2014-yilda yangi ilmiy laboratoriya qurildi.",
+            "y2015": "2015-yilda ishlab chiqarish quvvati 50% ga oshdi.",
+            "y2016": "2016-yilda yangi dori turlari ishlab chiqildi.",
+            "y2017": "2017-yilda kompaniya yangi bozorga kirib bordi.",
+            "y2018": "2018-yilda onlayn savdo platformasi ishga tushdi.",
+            "y2019": "2019-yilda mahsulot assortimentini kengaytirildi.",
+            "y2020": "2020-yilda xalqimiz ehtiyojlari va bozor talablariga binoan Bayan Medical asos solindi.",
+            "y2021": "2021-yilda yangi ishlab chiqarish binosi qurildi.",
+            "y2022": "2022-yilda eksport hajmi ikki barobarga oshdi.",
+            "y2023": "2023-yilda yangi tadqiqot markazi ochildi.",
+            "y2024": "2024-yilda kompaniya xalqaro mukofotga sazovor bo‘ldi."
+
+
+        
+      },
+
+        "directors": {
+          "eyebrow": "Direktorlarimiz",
+          "heading": "Direktorlar kengashi",
+          "intro": "Biz sog‘liqni saqlash sohasida ishonchli yechimlar taqdim etuvchi innovatsion farmatsevtika kompaniyasimiz.",
+          "chair": {
+            "name": "Ulug‘bek Mamatqulov",
+            "role": "Direktorlar kengashi raisi"
+          },
+          "member1": {
+            "name": "Xaqberdiyev Rustam",
+            "role": "INSO pharm Bosh direktori"
+          },
+          "member2": {
+            "name": "Mamatqulov Abdushukur",
+            "role": "Direktorlar kengashi raisining o‘rinbosari"
+          }
+        },
+        "ask":{
+          "eyebrow": "SAVOL BERING",
+          "title": "Savolingiz bormi?",
+          "subtitle": "Quyidagi shaklni to‘ldiring — odatda 1 ish kuni ichida javob beramiz.",
+          "name": "Ism familiya",
+          "email": "Email",
+          "topic": "Mavzu",
+          "message": "Savolingiz",
+          "ph": {
+            "name": "Masalan, Ali Karimov",
+            "email": "you@example.com",
+            "topic": "Mavzuni tanlang (ixtiyoriy)",
+            "message": "Savolingizni batafsil yozing…"
+            },
+          "topics": {
+            "products": "Mahsulotlar",
+            "partnership": "Hamkorlik",
+            "careers": "Karyera"
+          },
+          "hint": "Ma’lumotlaringiz maxfiy saqlanadi.",
+          "send": "Yuborish",
+          "sending": "Yuborilmoqda…",
+          "ok": "Rahmat! Xabaringiz qabul qilindi.",
+          "err": "Uzr, xabarni yuborib bo‘lmadi. Keyinroq urinib ko‘ring.",
+          "emailErr": "Email manzil noto‘g‘ri ko‘rinmoqda."
+        },
+        
+        
+          "technology": {
+            "eyebrow": "Texnologiya",
+            "title": "Bizning texnologiyalarimiz",
+            "subtitle": "Biz texnologiyalar va ilmiy yondashuv orqali dori vositalarini yanada samarali qilish ustida ishlaymiz.",
+            "heading": "Innovatsion texnologiyalar",  
+            "subheading": "Sifatli mahsulotlar va bozorda yetakchilikning asosiy omili",
+            "text_first_bayan": "BAYAN MEDICAL kompaniyasi 1 ml dan 10 ml gacha hajmdagi shisha ampulalarda steril inʼyeksion eritmalar ishlab chiqarishga ixtisoslashgan zamonaviy farmatsevtika zavodiga ega. Ishlab chiqarish quvvatlari yakuniy sterilizatsiya bilan jihozlangan ikkita avtomatlashtirilgan liniyani o‘z ichiga oladi, ularning har biri daqiqasiga 500 tagacha ampula ishlab chiqarish imkoniyatiga ega. Bir smenali ishlash sharoitida yillik ishlab chiqarish quvvati 16 milliondan ortiq o‘ramni tashkil etadi. Barcha jarayonlar GMP standartlariga muvofiq amalga oshiriladi va “A”, “C” hamda “D” toifali toza xonalarda olib boriladi. Korxona Xitoydan olib kelingan yuqori texnologiyali uskunalar bilan jihozlangan hamda sifat nazorati uchun o‘z laboratoriyalariga ega. Zamonaviy muhandislik tizimlari, suv tayyorlash uskunalari, jarayonlarni avtomatlashtirish va malakali mutaxassislar xavfsiz va samarali mahsulotning barqaror ishlab chiqarilishini taʼminlaydi.",
+            "text_second_bayan": "BAYAN MEDICAL zavodining birinchi liniyasi 1 ml dan 10 ml gacha hajmdagi shisha ampulalarda steril inʼyeksion eritmalar ishlab chiqarishga mo‘ljallangan. Ishlab chiqarish jarayonlari quyidagilarni o‘z ichiga oladi: ampulalarni yuvish va depirolizatsiya qilish, eritma tayyorlash, filtratsiya, to‘ldirish, yopish, sterilizatsiya, inspeksiya va qadoqlash. Liniya “C” va “A” toifali toza xonalar majmuasida joylashgan bo‘lib, H14 sinfidagi HEPA filtrlari va bosim, harorat hamda namlikni nazorat qilish tizimiga ega ventilyatsiya uskunalari bilan jihozlangan. Barcha jarayonlar GMP standartlariga muvofiq amalga oshiriladi. Sifat nazorati har bir bosqichda olib boriladi. Xodimlar muntazam ravishda o‘qitiladi va attestatsiyadan o‘tkaziladi.",
+            "text_third_bayan": "BAYAN MEDICAL zavodining ikkinchi ishlab chiqarish liniyasi birinchisiga o‘xshash bo‘lib, turli dori vositalari va hajmlarga tez moslashish imkoniyatiga ega keng ko‘lamli inʼyeksion eritmalar ishlab chiqarishga mo‘ljallangan. Liniya xuddi shunday uskuna to‘plami bilan jihozlangan: reaktorlar, filtrlash qurilmalari, to‘ldirish va qadoqlash mashinalari, sterilizatorlar. Ishlab chiqarish xonalari GMP talablari va “D”, “C” hamda “A” toifali toza xona standartlariga to‘liq javob beradi. Sanitar himoyaga alohida eʼtibor qaratiladi. Liniya atrof-muhit parametrlarini avtomatlashtirilgan nazorat tizimlari bilan taʼminlangan bo‘lib, mahsulot sifatining barqarorligini kafolatlaydi. Eritma tayyorlashdan tortib qadoqlashgacha bo‘lgan barcha bosqichlar qatʼiy sifat nazorati ostida amalga oshiriladi, laboratoriya tahlillari korxonaning o‘z mikrobiologik va kimyoviy-analitik laboratoriyalarida o‘tkaziladi. Liniya yuqori yuklama uchun mo‘ljallangan va har bir mahsulot seriyasining to‘liq kuzatuvchanligini taʼminlaydi.",
+            "tabs": { "bayan": "Bayan Medical", "seem": "SEEM" },
+            "bayan": {
+              "heroAlt": "Bayan Medical ishlab chiqarish texnologiyalari",
+              "intro": "Bayan Medical Yevropa va Osiyodagi yetakchi farmatsevtika kompaniyalari bilan hamkorlikda zamonaviy texnologiyalarni ishlab chiqarishga joriy etmoqda...",
+              "b1": {
+                "alt": "Shisha ampulalarni qizdirish liniyasi",
+                "title": "1-LINIYA (Inʼeksiya eritmalarini ishlab chiqarish)",
+                "body": "Zamonaviy shisha ampulalarda inʼeksiya eritmalarini tayyorlash... GMP standartlariga mos."
+              },
+              "b2": {
+                "alt": "Bo'sh ampulalarni ishlab chiqarish",
+                "title": "2-LINIYA (Bo‘sh ampulalar ishlab chiqarish)",
+                "body": "Oyiga 20 million dona ampula... xalqaro standartlarga javob beradi."
+              }
+            },
+        
+            "seem": {
+              "heroAlt": "SEEM fabrikasi ishlab chiqarish texnologiyalari",
+              "intro": "SEEM zavodi steril qadoqlash, granulatsiya va quruq aralashmalar bo‘yicha ilg‘or yechimlarni qo‘llaydi...",
+              "b1": {
+                "alt": "SEEM – qadoqlash liniyasi",
+                "title": "Avtomatlashtirilgan qadoqlash liniyasi",
+                "body": "Yuqori tezlikda dozalash va yopish; optik nazorat orqali sifat kafolatlanadi."
+              },
+              "b2": {
+                "alt": "SEEM – granulatsiya va aralashtirish",
+                "title": "Granulatsiya va aralashtirish bo‘limi",
+                "body": "Chang nazorati, toza xonalar va onlayn monitoring tizimlari bilan jihozlangan."
+              }
+            }
+          },
+        
+      
+
+        "contact": {
+          "title": "Kontaktlar",
+          "subtitle": "Biz bilan bog‘laning — savollarga mamnuniyat bilan javob beramiz.",
+          "eyebrow": "Kontaktlar",
+          "bigTitle": {
+            "line1": "Kompaniya",
+            "line2": "kontakt ma'lumotlari"
+          },
+          "labels": {
+            "phone": "(Telefon)",
+            "email": "(E-mail)",
+            "socials": "(Ijtimoiy tarmoqlar)"
+          },
+          "phone": {
+            "raw": "+998715652345",
+            "display": "99871 565 23 45"
+          },
+          "email": { "value": "info@bayan-group.com" },
+          "social": {
+            "telegram": "https://t.me/bayangroup",
+            "whatsapp": "https://wa.me/998715652345",
+            "linkedin": "https://www.linkedin.com/company/bayan-group-uz"
+          },
+          "map": {
+            "title": "Bayan Group joylashuvi",
+            "embedSrc": "https://www.openstreetmap.org/export/embed.html?bbox=69.233%2C41.293%2C69.310%2C41.345&layer=mapnik&marker=41.318%2C69.273"
+          }
+        },
+
+
+    
+    
+        "home": {
+          "heroTitleLine1": "Sog‘liq uchun",
+          "heroTitleLine2": "yaratilgan",
+          "heroTitleLine3": "mukammmallik",
+          "heroSubtitle": "Sog‘liq uchun xavfsiz va sifatli farmasevtik mahsulotlar ishlab chiqaramiz.",
+          "heroCta": "Faoliyatimiz haqida",
+          "abouteyebrow": "Biz haqimizda",
+          "abouttitle": "Bayan Group — sifat va yetakchilik ramzi",
+          "aboutsubtitle": "Bayan Group — O‘zbekistondagi farmasevtika sohasining yetakchi kompaniyalaridan biri. Biz xalqaro standartlarga mos keluvchi, xavfsiz va samarali dori vositalarini ishlab chiqaramiz. Ilg‘or texnologiyalar, malakali mutaxassislar va qat’iy sifat nazorati bizning har bir mahsulotimizning asosi hisoblanadi.",
+          "more": "Batafsil",
+          "statistic1": "Yillik tajriba",
+          "statistic2": "Turdagi mahsulotlar",
+          "statistic3": "ish o'rinlari",
+          "statistic4": "Xalqaro hamkorlar",
+          "techeyebrow": "Texnologiyalar",  
+          "techtitle": "Innovatsion texnologiyalar",
+          "newseyebrow": "YANGILIKLAR",
+          "newstitle": "So'ngi yangiliklari",
+          "techsubtitle": "Biz texnologiyalar va ilmiy yondashuv orqali dori vositalarini yanada samarali qilish ustida ishlaymiz.",
+          "techtext1": "Bayan Group — xalqaro GMP standartlariga to‘liq mos keluvchi ishlab chiqarish jarayoniga ega. Har bir mahsulotimiz zamonaviy texnologiyalar asosida, qat’iy sifat nazorati ostida yaratiladi. Biz doimo yangi ishlab chiqarish liniyalari va innovatsion uskunalarni joriy etib, zamon bilan birga rivojlanamiz. Mijozlarimizga ishonch va sifat kafolatini berish — bizning asosiy maqsadimiz.",
+          "items": {
+            "antibiotics": {
+              "title": "Yangi antibiotik seriyasining ishlab chiqarilishi yo‘lga qo‘yildi",
+              "excerpt": "2025-yil yanvar oyida korxonamiz tomonidan yangi avlod, keng ta'sir doirasiga ega antibiotiklar seriyasi ishlab chiqarish yo‘lga qo‘yildi."
+            },
+            "gmp": {
+              "title": "Korxonamiz GMP sertifikatini muvaffaqiyatli qo‘lga kiritdi",
+              "excerpt": "Kompaniyamiz 2025-yil may oyida xalqaro GMP standartlariga muvofiqlik bo‘yicha sertifikat olishga muvaffaq bo‘ldi."
+            },
+            "iso": {
+              "title": "ISO sertifikati",
+              "excerpt": "2025-yil aprel oyida korxonamiz ISO 9001:2015 sifat menejmenti tizimi bo‘yicha sertifikatga ega bo‘ldi."
+            } 
+          },
+
+          "techtext2": "Bizning sifatga bo‘lgan yondashuvimiz xalqaro hamkorlik bilan mustahkamlangan. Yil sayin yangi davlatlarning ilmiy tajribasini o‘rganib, eng yaxshi andozalarni o‘zimizga tatbiq etamiz. Natijada, har bir mahsulotimiz faqatgina yuqori sifat standartlariga emas, balki global bozor talablariga ham mos keladi. Bayan Group — bilim va tajriba almashinuvi orqali mukammallikka intiluvchi kompaniya."
+        },
+
+         
+        "companies": {
+            "title": "Bizning kompaniyalarimiz",
+            "subtitle": "Kompaniyamiz sog‘liqni saqlash sohasida yuqori sifatli dori vositalarini ta’minlashga ixtisoslashgan",
+              "eyebrow": "Kompaniyalar",
+              "cta": "Batafsil",
+              "bayan": {
+                "tab": "Bayan Medical",
+                "title": "Bayan Medical",
+                "body": "2020-yildan beri faoliyat yuritayotgan Bayan Medical zamonaviy farmatsevtika korxonasi bo‘lib, 12 000 m² maydonda joylashgan. Zavod 400 dan ortiq malakali mutaxassislarni ish bilan ta’minlaydi va infuzion eritmalar, tabletkalar hamda kapsulalardagi dorivor vositalarni ishlab chiqarishga ixtisoslashgan. Kompaniya ichki va xalqaro farmatsevtika bozori uchun yuqori sifatli va ishonchli mahsulotlar yetkazib beradi."
+              },
+              "seem": {
+                "tab": "SEEM",
+                "title": "SEEM",
+                "body": "2015-yilda tashkil etilgan SEEM zavodi O‘zbekistondagi yetakchi farmatsevtika ishlab chiqaruvchilardan biri bo‘lib, 26 000 m² maydonda faoliyat yuritadi va 500 dan ortiq xodimni ish bilan ta’minlaydi. Zavod infuzion eritmalar, tabletkalar va kapsulalarni ishlab chiqaradi, GMP standartlariga muvofiq ishlaydi va xalqaro bozorlar bilan faol hamkorlik qiladi."
+              },
+              "inso": {
+                "tab": "INSO pharm",
+                "title": "INSO pharm",
+                "body": "INSO pharm — Markaziy Osiyo mamlakatlarida farmatsevtika sohasi uchun to‘liq xizmatlar ko‘rsatuvchi servis kompaniyasi. Kompaniya mahsulotni bozorda joylashtirish, marketing va tarqatish bo‘yicha xizmatlar ko‘rsatadi, Yevropa va Amerika kompaniyalarining mahsulotlarini mintaqaviy bozorlarga olib kirishga yordam beradi."
+              }
+
+            
+        },
+        "news":{
+          "eyebrow": "YANGILIKLAR",
+          "title": "Kompaniya yangiliklari",
+          "subtitle": "So‘nggi yangiliklar orqali kompaniya hayoti, innovatsiyalar va rivojlanish yo‘nalishlaridan xabardor bo‘ling",
+          "pagination": { "prev": "Oldingi", "next": "Keyingi" },
+          "items": {
+            "antibiotics": {
+              "title": "Yangi antibiotik seriyasining ishlab chiqarilishi yo‘lga qo‘yildi",
+              "excerpt": "2025-yil yanvar oyida korxonamiz tomonidan yangi avlod, keng ta'sir doirasiga ega antibiotiklar seriyasi ishlab chiqarish yo‘lga qo‘yildi."
+            },
+            "gmp": {
+              "title": "Korxonamiz GMP sertifikatini muvaffaqiyatli qo‘lga kiritdi",
+              "excerpt": "Kompaniyamiz 2025-yil may oyida xalqaro GMP standartlariga muvofiqlik bo‘yicha sertifikat olishga muvaffaq bo‘ldi."
+            },
+            "iso": {
+              "title": "ISO sertifikati",
+              "excerpt": "2025-yil aprel oyida korxonamiz ISO 9001:2015 sifat menejmenti tizimi bo‘yicha sertifikatga ega bo‘ldi."
+            },
+            "newline": {
+              "title": "Yangi ishlab chiqarish liniyasi",
+              "excerpt": "Kompaniyamiz 2025-yil yanvar oyida yangi zamonaviy dori ishlab chiqarish liniyasini ishga tushirdi."
+            },
+            "randd": {
+              "title": "Ilmiy tadqiqot bo‘limi tashkil etildi",
+              "excerpt": "2024-yil dekabr oyida kompaniya tarkibida ilmiy-tadqiqot va innovatsiyalar bo‘limi faoliyati yo‘lga qo‘yildi."
+            },
+            "partnership": {
+              "title": "Hamkorlik shartnomasi",
+              "excerpt": "2025-yil fevral oyida kompaniyamiz Germaniyaning yetakchi farmatsevtika ishlab chiqaruvchisi bilan strategik hamkorlik shartnomasini imzoladi."
+            },
+            "registration": {
+              "title": "Yangi mahsulot ro‘yxatdan o‘tkazildi",
+              "excerpt": "2025-yil mart oyida korxonamiz tomonidan ishlab chiqarilgan yangi dori vositasi SSV tomonidan ro‘yxatdan o‘tkazildi."
+            },
+            "export": {
+              "title": "Eksportga chiqish",
+              "excerpt": "2025-yil iyun oyida mahsulotlarimiz ilk bor Markaziy Osiyo bozoriga eksport qilindi."
+            }
+          }
+        },
+        "team":{
+          "eyebrow": "JAMOAMIZ",
+          "title": "Bizning Jamoamiz",
+          "subtitle": "Jamoamiz — bu bilim, tajriba va bir maqsad yo‘lida birlashgan ishonchli mutaxassislar.",
+          "members": {
+            "1": { "name": "Manatqulov Xushnud", "role": "Sotuv menejeri" },
+            "2": { "name": "Vahidxov Fariddin", "role": "Sifat nazoratchisi" },
+            "3": { "name": "Nurmuhammad Mamatqulov", "role": "Bosh buxgalter" },
+            "4": { "name": "Qayumov Zafar", "role": "Bosh operatsion direktor" },
+            "5": { "name": "Dadaxonov Ixtiyor", "role": "Kadrlar bo‘limi boshlig‘i (HR)" },
+            "6": { "name": "Azmetova Yekaterina", "role": "Marketolog" },
+            "7": { "name": "Musayev O‘tkir", "role": "Logistika menejeri" },
+            "8": { "name": "Sarana Vladimirova", "role": "Moliyaviy tahlilchi" }
+          },
+          "story": {
+            "heading": "Katta Oila, Katta Maqsadlar — Bayan Group",
+            "body": "Bayan Group jamoasi — bir-birini qo‘llab-quvvatlaydigan katta oila. Har bir xodim iste’dodi, intilishi va qadrini ko‘ramiz, chunki muvaffaqiyatning asosi odamlar, ularning bilim va tajribasidir. Shuning uchun biz doimiy o‘quv dasturlari, mentorlik, aniq maqsadlar va shaffof baholash orqali xodimlarimizning martabasini bosqichma-bosqich rivojlantiramiz. Kompaniyada g‘oyalar erkin almashinadi, tashabbus rag‘batlanadi, mas’uliyat esa adolatli taqsimlanadi. Hamkorlik, hurmat va halollik bizning asosiy qadriyatlarimiz bo‘lib, jamoa ichidagi ishonchni mustahkamlaydi. Bayan Group kuchli mutaxassislar yetishtiradi: texnologiya, sifat, marketing va boshqaruv yo‘nalishlarida zamonaviy yondashuvlarni qo‘llab, natijadorlikni oshiradi. Biz har kuni mijozlar, hamkorlar va jamiyat uchun ko‘proq foyda yaratishga intilamiz. Birgalikda o‘samiz, barqaror muvaffaqiyat sari ilgarilaymiz. Har bir xodim o‘z salohiyatini kashf etishi, yangi ko‘nikmalar egallashi va xalqaro mezonlarga mos natijalar yaratishi uchun imkon va sharoitlarimiz doimiy ravishda kengaymoqda.",
+            "photoAlt": "Jamoamizning umumiy surati"
+          }
+        },
+        "vacancies":{
+          "eyebrow": "BO'SH ISH O'RINLARI",
+          "heading": "Bo'sh ish o'rinlari",
+          "subheading": "Innovatsion farmatsevtika jamoamizga qo‘shiling: o‘sish, o‘qish, barqaror ish haqi va ta’sirchan loyihalar sizni kutadi bugun.",
+          "title": "Kompaniyamiz bir qismiga aylaning",
+          "subtitle": "Biz sog‘liqni saqlash sohasida ishonchli yechimlar taqdim etuvchi innovatsion farmatsevtika kompaniyasimiz. Faoliyatimizda zamonaviy ishlab chiqarish texnologiyalari, sertifikatlangan mahsulotlar va xalqaro standartlarga sodiqlik muhim o‘rin tutadi.",
+          "pagination": { "prev": "Oldingi", "next": "Keyingi" },
+          "jobs": {
+            "1": { "title": "Katta muhandis", "body": "Ishlab chiqarish jarayonlarini takomillashtirish, uskunalarni barqaror ishlashini ta’minlash, xavfsizlik va samaradorlik standartlarini qo‘llash.", "href": "/vacancies/senior-engineer" },
+            "2": { "title": "Yordamchi farmasevt", "body": "Dori vositalari bilan ishlash, hujjatlashtirish, sifat talablariga muvofiqlik va iste’molchilar bilan to‘g‘ri muloqot.", "href": "/vacancies/assistant-pharmacist" },
+            "3": { "title": "Katta biotexnolog", "body": "Fermentatsiya jarayonlari, steril ishlab chiqarish va ilmiy-tadqiqot loyihalarini yuritish.", "href": "/vacancies/senior-biotechnologist" },
+            "4": { "title": "Katta tadqiqotchi-olim", "body": "Laboratoriya tadqiqotlari, analitik usullarni joriy etish va validatsiya, hisobotlar tayyorlash.", "href": "/vacancies/senior-researcher" },
+            "5": { "title": "Formulyator", "body": "Dori shakllarini ishlab chiqish, yordamchi moddalarning tanlovi va barqarorlik sinovlari.", "href": "/vacancies/formulator" },
+            "6": { "title": "Regulyator", "body": "Ro‘yxatdan o‘tkazish, farmakonadzor va hujjatlarni xalqaro talablarga muvofiq tayyorlash.", "href": "/vacancies/regulatory-specialist" }
+          },
+          "contact": {
+            "title": "Bizga rezyume qoldiring, biz albatta siz bilan bog'lanamiz",
+            "website": "www.hh.uz",
+            "websiteValue": "www.hh.uz",
+            "company": "Bayan-group MCHJ",
+            "companyValue": "Bayan-group MCHJ",
+            "email": "E-mail",
+            "emailValue": "careers@bayan-group.com",
+            "telegram": "Telegram",
+            "telegramValue": "@careers_bayan_group_bot"
+          }
+        },
+        "whyus":{
+            "eyebrow": "NEGA BIZ?",
+            "title": "Sifat, tajriba va ishonch bir joyda",
+            "s1": { "title": "GMP va ISO muvofiqligi", "desc": "Jarayonlar xalqaro GMP va ISO talablari asosida boshqariladi." },
+            "s2": { "title": "Malakali mutaxassislar", "desc": "O‘nlab tajribali mutaxassislar va doimiy treninglar." },
+            "s3": { "title": "Sifatli mahsulotlar", "desc": "Har bir partiya to‘liq laboratoriya sinovidan o‘tkaziladi." },
+            "s4": { "title": "Innovatsion yondashuv", "desc": "Avtomatlashtirish va R&D samaradorlikni oshiradi." },
+            "s5": { "title": "Ishonchli hamkorlik", "desc": "Mahalliy va xalqaro hamkorlar bilan barqaror aloqalar." }
+
+          
+        }
+        
+        
+
+        
+    
+  }
+  

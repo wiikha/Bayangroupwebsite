@@ -1,0 +1,351 @@
+{
+
+        "site": {
+          "name": "Bayan Group",
+          "description": "Bayan Group — a pharmaceutical holding with two factories in Uzbekistan: Bayan Medical and SEEM."
+        },
+        "nav": {
+          "home": "Home",
+          "aboutus": "About Us",
+          "bayan": "Bayan Group",
+          "directors": "Board of Directors",
+          "values": "Our Values",
+          "ourcompanies": "Our Companies",
+          "ourteam": "Our Team",
+          "technology": "Technology",
+          "news": "News",
+          "careers": "Career",
+          "contacts": "Contacts",
+          "vacancies": "Vacancies",
+          "copy": "© {year} Bayan Group"
+        },
+        "footer": {
+          "about": "About",
+          "companies" : "Companies",
+          "tech": "Technology",
+          "news": "News",
+          "vacancies": "Vacancies",
+          "navigation": "Navigation",
+          "contacts": "Contacts",
+          "email": "info@bayangroup.uz",
+          "phone": "+998 (00) 000-00-00",
+          "address": "Tashkent, Uzbekistan",
+          "copy": "© {year} Bayan Group",
+          "built": "Built with Next.js"
+        },
+        "home": {
+          "heroTitleLine1": "Care",
+          "heroTitleLine2": "for every ",
+          "heroTitleLine3": "life",
+          "heroSubtitle": "Building a healthy future with quality and reliable medicines",
+          "heroCta": "About our activities",
+          "abouteyebrow": "About Us",
+    "abouttitle": "Bayan Group — a symbol of quality and leadership",
+    "aboutsubtitle": "Bayan Group is one of the leading companies in Uzbekistan’s pharmaceutical industry. We produce safe and effective medicines that meet international standards. Advanced technologies, qualified specialists, and strict quality control are the foundation of each of our products.",
+    "more": "Read more",
+    "statistic1": "Years of experience",
+    "statistic2": "Types of products",
+    "statistic3": "jobs",
+    "statistic4": "International partners",
+    "newseyebrow": "NEWS",
+    "newstitle": "Latest news",
+    "techeyebrow": "Technologies",
+    "techtitle": "Innovative technologies",
+    "techsubtitle": "We work to make medicines more effective through technology and scientific approaches.",
+    "techtext1": "Bayan Group operates a manufacturing process fully compliant with international GMP standards. Each product is created using advanced technologies and undergoes rigorous quality control. We continuously introduce new production lines and innovative equipment, keeping pace with the times. Our primary goal is to ensure our customers receive quality they can trust.",
+    "techtext2": "Our approach to quality is reinforced by international collaboration. Each year, we study the scientific achievements of new countries, adopting the best practices and applying them to our work. As a result, every product we make meets not only the highest quality standards but also the demands of the global market. Bayan Group is a company striving for excellence through the exchange of knowledge and experience.",
+    "items": {
+              "antibiotics": {
+                "title": "New antibiotics line launched",
+                "excerpt": "In January 2025, we launched a new generation of broad-spectrum antibiotics."
+              },
+              "gmp": {
+                "title": "We successfully obtained GMP certification",
+                "excerpt": "In May 2025, our compliance with international GMP standards was certified."
+              },
+              "iso": {
+                "title": "ISO certificate",
+                "excerpt": "In April 2025, the enterprise obtained ISO 9001:2015 certification for its quality management system."
+              }}
+        },
+
+          "contact": {
+            "title": "Contacts",
+            "subtitle": "Reach out — we’ll be happy to help.",
+            "eyebrow": "CONTACTS",
+            "bigTitle": {
+              "line1": "Company",
+              "line2": "contact details"
+            },
+            "labels": {
+              "phone": "(Phone)",
+              "email": "(E-mail)",
+              "socials": "(Social networks)"
+            },
+            "phone": {
+              "raw": "+998715652345",
+              "display": "+998 71 565 23 45"
+            },
+            "email": { "value": "info@bayan-group.com" },
+            "social": {
+              "telegram": "https://t.me/bayangroup",
+              "whatsapp": "https://wa.me/998715652345",
+              "linkedin": "https://www.linkedin.com/company/bayan-group-uz"
+            },
+            "map": {
+              "title": "Bayan Group location",
+              "embedSrc": "https://www.openstreetmap.org/export/embed.html?bbox=69.233%2C41.293%2C69.310%2C41.345&layer=mapnik&marker=41.318%2C69.273"
+            }
+          },
+
+
+
+          "about": {
+            "hero_title":"About Us",
+            "hero_subtitle": "We are an innovative pharmaceutical company delivering reliable healthcare solutions.",
+            "eyebrow": "About us",
+            "partnereyebrow": "Partners",
+            "partnertitle": "Our Partners",
+            "title":{
+              "line1": "Bayan Group"
+            },
+            "info": {
+              "title": "Company Information",
+              "body": "Bayan Group is a holding that unites several successful companies and holds a leading position in the pharmaceutical industry. We focus on high quality, reliability, and efficiency in the production, import, and distribution of medicines. Modern technologies, manufacturing in accordance with international standards, and global partnerships are our key strengths. Bayan Group provides the population with innovative and high-quality pharmaceuticals, striving to create a healthier future. Partnering with us means not only quality and trust but also a guarantee of sustainable growth and new opportunities."
+            },
+            "info2": {
+              "title": "Founder of the company",
+              "body": "Ulugbek Mamatkulov (February 15, 1979, Urgut District, Samarkand Region, Uzbekistan) is an Uzbek entrepreneur, founder, and head of Bayan Group companies. He operates in the fields of pharmaceuticals, manufacturing, and distribution of medicines."
+            },
+            "info3":{
+              "body": "Since 2012, he has been serving as a shareholder of the joint venture “Samarkand England Eco-Medical.” In 2020, he acquired a pharmaceutical plant in Tashkent and named it “Bayan Medical.” In 2023, this enterprise was merged with “Samarkand England Eco-Medical,” forming the “Bayan Group” company group."
+            },
+            "images": {
+              "lab": { "alt": "Laboratory research and quality control" },
+              "engineer": { "alt": "Operator on the production line" }
+            },
+
+                "eyebrow_2": "Our Achievements",
+                "title_2": "Our Achievements",
+                "y2010": "In 2010, the company launched its first product.",
+                "y2011": "In 2011, a new production line was opened.",
+                "y2012": "In 2012, we received international quality certifications.",
+                "y2013": "In 2013, export activities began.",
+                "y2014": "In 2014, a new scientific laboratory was built.",
+                "y2015": "In 2015, production capacity increased by 50%.",
+                "y2016": "In 2016, new types of medicines were developed.",
+                "y2017": "In 2017, the company entered a new market.",
+                "y2018": "In 2018, the online sales platform was launched.",
+                "y2019": "In 2019, the product range was expanded.",
+                "y2020": "In 2020, based on the needs of our people and market demand, Bayan Medical was established.",
+                "y2021": "In 2021, a new production facility was built.",
+                "y2022": "In 2022, export volumes doubled.",
+                "y2023": "In 2023, a new research center was opened.",
+                "y2024": "In 2024, the company received an international award."
+              },
+
+                "directors": {
+                  "title": "Board of directors",
+                  "eyebrow": "Our Directors",
+                  "heading": "Board of Directors",
+                  "intro": "We are an innovative pharmaceutical company delivering reliable healthcare solutions.",
+                  "chair": {
+                    "name": "Ulug'bek Mamatqulov",
+                    "role": "Chairman of the Board"
+                  },
+                  "member1": {
+                    "name": "Khakberdiyev Rustam",
+                    "role": "CEO, INSO pharm"
+                  },
+                  "member2": {
+                    "name": "Mamatqulov Abdushukur",
+                    "role": "Deputy Chairman of the Board"
+                  }
+                },
+            "technology": {
+            "eyebrow": "Technology",
+            "title": "Our Technologies",
+            "subtitle": "We improve medicines through advanced technologies and a science-driven approach.",
+            "heading": "Innovational technologies",
+            "subheading": "We improve medicines through advanced technologies and a science-driven approach.",
+            "text_first_bayan": "BAYAN MEDICAL operates a modern pharmaceutical plant specializing in the production of sterile injectable solutions in glass ampoules ranging from 1 ml to 10 ml. The manufacturing facilities include two automated lines with terminal sterilization, each capable of producing up to 500 ampoules per minute. With single-shift operations, the annual capacity exceeds 16 million packs. All processes comply with GMP standards and are carried out in clean rooms of classes “A,” “C,” and “D.” The facility is equipped with high-tech machinery from China and has its own laboratories for quality control. Advanced engineering systems, water treatment, process automation, and highly qualified personnel ensure the stable production of safe and effective products.",
+            "text_second_bayan": "BAYAN MEDICAL is designed for manufacturing sterile injectable solutions in glass ampoules ranging from 1 ml to 10 ml. The production process includes: washing and depyrogenation of ampoules, solution preparation, filtration, filling, sealing, sterilization, inspection, and packaging. The line is located in a clean room complex of classes “C” and “A”, equipped with a ventilation system featuring H14-class HEPA filters and controls for pressure, temperature, and humidity. All processes comply with GMP standards. Quality control is carried out at every stage. Personnel receive regular training and certification.",
+            "text_third_bayan": "BAYAN MEDICAL is similar to the first and is designed for large-scale production of injectable solutions, with the capability of rapid reconfiguration for various products and volumes. It is equipped with a similar set of machinery, including reactors, filtration units, filling and packaging machines, and sterilizers. The production areas fully comply with GMP requirements and the **clean room standards of classes “D,” “C,” and “A.” Special attention is given to sanitary protection. The line features automated environmental control systems to ensure consistent product quality. All stages — from solution preparation to packaging — are subject to strict quality control, with laboratory testing carried out in the company’s own microbiological and chemical-analytical laboratories. The line is designed for high-capacity operation and ensures full traceability of each production batch.",
+            "tabs": { "bayan": "Bayan Medical", "seem": "SEEM" },
+        
+            "bayan": {
+              "heroAlt": "Bayan Medical manufacturing technologies",
+              "intro": "Bayan Medical collaborates with leading European and Asian pharma companies to implement state-of-the-art technologies...",
+              "b1": {
+                "alt": "Glass ampoule heating line",
+                "title": "LINE 1 (Injection solutions manufacturing)",
+                "body": "A modern line for injection solutions in glass ampoules... fully compliant with GMP."
+              },
+              "b2": {
+                "alt": "Empty ampoules production",
+                "title": "LINE 2 (Empty ampoules production)",
+                "body": "Up to 20 million ampoules per month... meets international quality standards."
+              }
+            }
+            },
+              
+
+            "ask":{
+              "eyebrow": "ASK A QUESTION",
+              "title": "Have a question?",
+              "subtitle": "Fill out the form — we typically reply within one business day.",
+              "name": "Full name",
+              "email": "Email",
+              "topic": "Topic",
+              "message": "Your question",
+              "ph": {
+                "name": "e.g., Alex Johnson",
+                "email": "you@example.com",
+                "topic": "Choose a topic (optional)",
+                "message": "Describe your question in detail…"
+              },
+              "topics": {
+                "products": "Products",
+                "partnership": "Partnership",
+                "careers": "Careers"
+              },
+              "hint": "Your information is kept confidential.",
+              "send": "Send",
+              "sending": "Sending…",
+              "ok": "Thanks! Your message has been received.",
+              "err": "Sorry, something went wrong. Please try again later.",
+              "emailErr": "The email address looks invalid."
+            },
+            
+
+        
+
+        
+          "companies": {
+            "title": "Our Companies",
+            "subtitle": "Our company specializes in providing high-quality medicines in the healthcare sector",
+              "eyebrow": "Companies",
+              "cta": "Learn more",
+              "bayan": {
+                "tab": "Bayan Medical",
+                "title": "Bayan Medical",
+                "body": "Bayan Medical is a modern pharmaceutical enterprise established in 2020, occupying 12,000 m² of production space. The plant employs over 400 skilled specialists and specializes in manufacturing infusion solutions, tablets, and capsules. The company supplies high-quality and reliable medicines to both domestic and international markets."
+              },
+              "seem": {
+                "tab": "SEEM",
+                "title": "SEEM",
+                "body": "Founded in 2015, SEEM is one of Uzbekistan’s leading pharmaceutical manufacturers. The facility covers 26,000 m², employs more than 500 staff, and produces infusion solutions, tablets, and capsules in strict compliance with GMP standards, actively cooperating with international markets."
+              },
+              "inso": {
+                "tab": "INSO pharm",
+                "title": "INSO pharm",
+                "body": "INSO pharm is a service company providing a full range of support for the pharmaceutical sector in Central Asia. We offer market entry, marketing, and distribution services, helping bring European and American pharmaceutical products into regional markets."
+
+            }
+            
+          },
+          "news":{
+            "eyebrow": "NEWS",
+            "title": "Company News",
+            "subtitle": "Stay up to date with the company’s life, innovations, and strategic developments",
+            "pagination": { "prev": "Previous", "next": "Next" },
+            "items": {
+              "antibiotics": {
+                "title": "New antibiotics line launched",
+                "excerpt": "In January 2025, we launched a new generation of broad-spectrum antibiotics."
+              },
+              "gmp": {
+                "title": "We successfully obtained GMP certification",
+                "excerpt": "In May 2025, our compliance with international GMP standards was certified."
+              },
+              "iso": {
+                "title": "ISO certificate",
+                "excerpt": "In April 2025, the enterprise obtained ISO 9001:2015 certification for its quality management system."
+              },
+              "newline": {
+                "title": "New production line",
+                "excerpt": "In January 2025, a state-of-the-art pharmaceutical production line was commissioned."
+              },
+              "randd": {
+                "title": "R&D department established",
+                "excerpt": "In December 2024, an in-house research and innovation unit began operations."
+              },
+              "partnership": {
+                "title": "Partnership agreement",
+                "excerpt": "In February 2025, we signed a strategic partnership with a leading German pharma company."
+              },
+              "registration": {
+                "title": "New product registered",
+                "excerpt": "In March 2025, our new medicinal product was registered by the Ministry of Health."
+              },
+              "export": {
+                "title": "First export shipment",
+                "excerpt": "In June 2025, our products were exported to Central Asian markets for the first time."
+              }
+            }
+          },
+          "team":{
+            "eyebrow": "OUR TEAM",
+            "title": "Our Team",
+            "subtitle": "Our team is a group of trusted professionals united by knowledge, experience and a shared mission.",
+            "members": {
+              "1": { "name": "Manatqulov Khushnud", "role": "Sales Manager" },
+              "2": { "name": "Vahidov Fariddin", "role": "Quality Control Specialist" },
+              "3": { "name": "Nurmuhammad Mamatqulov", "role": "Chief Accountant" },
+              "4": { "name": "Qayumov Zafar", "role": "Chief Operating Officer" },
+              "5": { "name": "Dadaxonov Ixtiyor", "role": "Head of HR" },
+              "6": { "name": "Azmetova Yekaterina", "role": "Marketing Specialist" },
+              "7": { "name": "Musayev O‘tkir", "role": "Logistics Manager" },
+              "8": { "name": "Sarana Vladimirova", "role": "Financial Analyst" }
+            },
+            "story": {
+              "heading": "Big Family, Big Goals — Bayan Group",
+              "body": "Bayan Group is a close-knit family that supports one another. We recognize each employee’s talent, drive, and value, because people—their knowledge and experience—are the foundation of success. That’s why we advance careers step by step through ongoing learning programs, mentoring, clear goals, and transparent performance evaluation. Ideas flow freely across the company, initiative is encouraged, and responsibility is distributed fairly. Collaboration, respect, and integrity are our core values that strengthen trust within the team. Bayan Group cultivates strong professionals: in technology, quality, marketing, and management we apply modern approaches to boost effectiveness. Every day we strive to create greater value for customers, partners, and society. We grow together and move toward sustainable success. We continually expand opportunities and conditions so that every employee can unlock their potential, acquire new skills, and deliver results that meet international standards.",
+              "photoAlt": "Team group photo"
+            }
+          },
+          "vacancies":{
+            "eyebrow": "VACANCIES",
+            "heading": "Vacancies",
+            "subheading": "Join our innovative pharmaceutical team: growth, learning, a stable salary, and impactful projects await you today.",
+            "title": "Become a part of our company",
+            "subtitle": "We are an innovative pharmaceutical company delivering reliable healthcare solutions. We rely on modern manufacturing technologies, certified products, and strict adherence to international standards.",
+            "pagination": { "prev": "Previous", "next": "Next" },
+            "jobs": {
+              "1": { "title": "Senior Engineer", "body": "Optimize production processes, ensure equipment reliability, and uphold safety and efficiency standards.", "href": "/vacancies/senior-engineer" },
+              "2": { "title": "Assistant Pharmacist", "body": "Work with medicinal products, maintain documentation, ensure quality compliance, and communicate with customers.", "href": "/vacancies/assistant-pharmacist" },
+              "3": { "title": "Senior Biotechnologist", "body": "Fermentation processes, sterile manufacturing, and participation in R&D projects.", "href": "/vacancies/senior-biotechnologist" },
+              "4": { "title": "Senior Research Scientist", "body": "Laboratory studies, implementation and validation of analytical methods, and reporting.", "href": "/vacancies/senior-researcher" },
+              "5": { "title": "Formulator", "body": "Develop dosage forms, select excipients, and run stability testing.", "href": "/vacancies/formulator" },
+              "6": { "title": "Regulatory Specialist", "body": "Registration, pharmacovigilance, and preparing documentation to international requirements.", "href": "/vacancies/regulatory-specialist" }
+            },
+            "contact": {
+              "title": "Send us your resume — we’ll get back to you",
+              "website": "www.hh.uz",
+              "websiteValue": "www.hh.uz",
+              "company": "Bayan-group LLC",
+              "companyValue": "Bayan-group LLC",
+              "email": "E-mail",
+              "emailValue": "careers@bayan-group.com",
+              "telegram": "Telegram",
+              "telegramValue": "@careers_bayan_group_bot"
+            }
+          },
+          "whyus":{
+            "eyebrow": "WHY US?",
+            "title": "Quality, expertise, and trust in one place",
+            "s1": { "title": "GMP & ISO compliance", "desc": "Processes are managed in line with international GMP and ISO requirements." },
+            "s2": { "title": "Qualified professionals", "desc": "Dozens of experienced specialists and ongoing training." },
+            "s3": { "title": "Quality products", "desc": "Every batch undergoes full laboratory testing." },
+            "s4": { "title": "Innovative approach", "desc": "Automation and R&D increase efficiency." },
+            "s5": { "title": "Reliable partnerships", "desc": "Stable relationships with local and international partners." }
+          }
+          
+          
+          
+          
+        
+        
+
+      
+}
