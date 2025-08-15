@@ -160,7 +160,24 @@
                   "member2": {
                     "name": "Mamatqulov Abdushukur",
                     "role": "Deputy Chairman of the Board"
+                  },
+                  "member3": {
+                    "name": "Saidjanov Munis",
+                    "role": "CeO of Bayan Medical"
+                  },
+                  "member4": {
+                    "name": "Mamatkulov Inomjon",
+                    "role": "Executive Director"
+                  },
+                  "member5": {
+                    "name": "Rashidov Feruz",
+                    "role": "CEO of SEEM"
+                  },
+                  "member6": {
+                    "name": "Jahongir Sharipov",
+                    "role": "Chief Financial Officer"
                   }
+
                 },
             "technology": {
             "eyebrow": "Technology",

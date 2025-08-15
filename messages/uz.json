@@ -96,6 +96,22 @@
           "member2": {
             "name": "Mamatqulov Abdushukur",
             "role": "Direktorlar kengashi raisining o‘rinbosari"
+          },
+          "member3": {
+            "name": "Saidjonov Munis",
+            "role": "Bayan Medical Bosh direktori"
+          },
+          "member4":{
+            "name": "Mamatqulov Inomjon",
+            "role": "Ijrochi direktori"
+          },
+          "member5": {
+            "name": "Rashidov Feruz",
+            "role": "SEEM Bosh direktori"
+          },
+          "member6": {
+            "name": "Jahongir Sharipov",
+            "role": "Bosh moliya direktori"
           }
         },
         "ask":{

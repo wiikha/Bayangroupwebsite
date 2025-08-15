@@ -128,77 +128,77 @@ export default function   Directors() {
               </div>
             </div>
           </div>
-          {/* Card 1 */}
+          {/* Card 3 */}
           <div className=" overflow-hidden">
             <Image
               src="/directors/image4.png"
-              alt={t("member1.name")}
+              alt={t("member3.name")}
               width={1200}
               height={1200}
               className="w-full h-auto shadow-sm "
             />
             <div className="px-4 sm:px-6 pt-3 pb-5 text-center">
               <div className="font-semibold text-[#0C1B3A]">
-                {t("member1.name")}
+                {t("member3.name")}
               </div>
               <div className="text-xs sm:text-sm text-[#6C7483] mt-1">
-                {t("member1.role")}
+                {t("member3.role")}
               </div>
             </div>
           </div>
 
-          {/* Card 2 */}
+          {/* Card 4 */}
           <div className="overflow-hidden ">
             <Image
               src="/directors/image5.png"
-              alt={t("member2.name")}
+              alt={t("member4.name")}
               width={1200}
               height={1200}
               className="w-full h-auto shadow-sm "
             />
             <div className="px-4 sm:px-6 pt-3 pb-5 text-center">
               <div className="font-semibold text-[#0C1B3A]">
-                {t("member2.name")}
+                {t("member4.name")}
               </div>
               <div className="text-xs sm:text-sm text-[#6C7483] mt-1">
-                {t("member2.role")}
+                {t("member4.role")}
               </div>
             </div>
           </div>
-           {/* Card 1 */}
+           {/* Card 5 */}
           <div className="overflow-hidden ">
             <Image
               src="/directors/image6.png"
-              alt={t("member2.name")}
+              alt={t("member5.name")}
               width={1200}
               height={1200}
               className="w-full h-auto shadow-sm "
             />
             <div className="px-4 sm:px-6 pt-3 pb-5 text-center">
               <div className="font-semibold text-[#0C1B3A]">
-                {t("member2.name")}
+                {t("member5.name")}
               </div>
               <div className="text-xs sm:text-sm text-[#6C7483] mt-1">
-                {t("member2.role")}
+                {t("member5.role")}
               </div>
             </div>
           </div>
 
-          {/* Card 2 */}
+          {/* Card 6 */}
           <div className="overflow-hidden ">
             <Image
               src="/directors/image6.png"
-              alt={t("member2.name")}
+              alt={t("member6.name")}
               width={1200}
               height={1200}
               className="w-full h-auto shadow-sm "
             />
             <div className="px-4 sm:px-6 pt-3 pb-5 text-center">
               <div className="font-semibold text-[#0C1B3A]">
-                {t("member2.name")}
+                {t("member6.name")}
               </div>
               <div className="text-xs sm:text-sm text-[#6C7483] mt-1">
-                {t("member2.role")}
+                {t("member6.role")}
               </div>
             </div>
           </div>
