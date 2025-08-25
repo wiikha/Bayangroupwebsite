@@ -12,7 +12,7 @@ export default function OurCompanies() {
   return (
     <main>
        {/* HERO */}
-                 <section className="relative">
+                 <section className="relative bg-[#EDF3FF]">
                    <div className="relative overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
                      {/* Background photo */}
                      <Image
@@ -109,7 +109,7 @@ export default function OurCompanies() {
               logo="/companies/bmed.png"
               title={t("bayan.title")}
               body={t("bayan.body")}
-              href="/bayan-medical"
+              href="https://bayanmedical.uz"
               photo="/companies/bmedteam.png"
               cta={t("cta")}
             />
@@ -125,7 +125,7 @@ export default function OurCompanies() {
               logo="/companies/seem.png"
               title={t("seem.title")}
               body={t("seem.body")}
-              href="/seem"
+              href="https://seem.uz"
               photo="/companies/seemteam.png"
               cta={t("cta")}
             />
@@ -141,7 +141,7 @@ export default function OurCompanies() {
               logo="/companies/inso.png"
               title={t("inso.title")}
               body={t("inso.body")}
-              href="/inso-pharm"
+              href="https://insopharm.uz"
               photo="/companies/insoteam.png"
               cta={t("cta")}
             />

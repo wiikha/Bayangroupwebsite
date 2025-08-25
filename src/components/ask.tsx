@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export default function AskQuestionSection() {
@@ -41,9 +42,10 @@ export default function AskQuestionSection() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 py-12 md:py-16">
         {/* Header */}
         <div className="text-center">
-          <div className="mx-auto inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1 text-xs font-semibold text-[#143C99] ring-1 ring-black/5">
-            {t("eyebrow")}
-          </div>
+          <div className="mb-2 sm:mb-4 text-[18px] font-medium text-[#2F4FA0]/80 tracking-wide flex items-center justify-center gap-2">
+                                                  <Image src="/about/logo_mini.png" alt="logo" width={50} height={50} className="inline-block h-4 w-4  " />
+                                                  {t("eyebrow")}
+                                                </div>
           <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#143C99]">
             {t("title")}
           </h2>

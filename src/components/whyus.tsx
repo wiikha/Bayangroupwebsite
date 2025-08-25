@@ -13,29 +13,38 @@ const polar = (cx: number, cy: number, r: number, deg: number) => {
   return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
 };
 
-// Burchaklar (faqat yuqori yarim doira): -180° (chap past) → 0° (o‘ng past)
+// -180° → 0° oralig‘ida yuqori yarim doira bo‘ylab joylashuv
 const angleFor = (id: number, total: number) =>
   -180 + ((id - 1) * 180) / (total - 1);
 
-// Qo‘shni raqamlar joylashuvi (markaz bilan to‘qnashmasligi uchun fiks)
-const NEIGHBOR_LEFT_DEG = -135;  // chap yon
-const NEIGHBOR_RIGHT_DEG = -45;  // o‘ng yon
+// Qo‘shni badge’lar burchaklari (chap/o‘ng yon)
+const NEIGHBOR_LEFT_DEG = -135;
+const NEIGHBOR_RIGHT_DEG = -45;
+// Arc’dan tepaga chiqarish uchun radiusga qo‘shiladigan ofset
+const NEIGHBOR_OFFSET = 36;
+
+// Badge ko‘rinishi (markaz, chap, o‘ng uchun bir xil)
+const BADGE_R = 24; // ~ h-12 / w-12
+const BADGE_FILL = "rgba(255,255,255,0.12)";
+const BADGE_RING = "rgba(255,255,255,0.25)";
+const BADGE_TEXT = "rgba(255,255,255,0.95)";
 
 export default function WhyUsSection() {
   const t = useTranslations("whyus");
-  const slides: Slide[] = useMemo(
+
+  const slides = useMemo<Slide[]>(
     () => [
       { id: 1, title: t("s1.title"), desc: t("s1.desc") },
       { id: 2, title: t("s2.title"), desc: t("s2.desc") },
       { id: 3, title: t("s3.title"), desc: t("s3.desc") },
       { id: 4, title: t("s4.title"), desc: t("s4.desc") },
-      { id: 5, title: t("s5.title"), desc: t("s5.desc") }
+      { id: 5, title: t("s5.title"), desc: t("s5.desc") },
     ],
     [t]
   );
 
   const total = slides.length;
-  const [index, setIndex] = useState(3); // 4-chi slayddan boshlaymiz (0-based)
+  const [index, setIndex] = useState(3); // 0-based, 4-chi slayddan boshlash
   const active = slides[index];
 
   const prev = () => setIndex((i) => (i - 1 + total) % total);
@@ -48,29 +57,36 @@ export default function WhyUsSection() {
   const CY = 500;
   const R = 460;
 
-  // Aktiv ko‘rsatkich koordinatasi
+  // Aktiv nuqta koordinatasi
   const aDeg = angleFor(active.id, total);
   const { x: AX, y: AY } = polar(CX, CY, R, aDeg);
 
-  // Qo‘shni raqamlar (faqat raqam — joylashuvi fiks)
+  // Qo‘shnilar: badge’larni arc’dan tepaga chiqaramiz (R + OFFSET)
   const leftId = active.id > 1 ? active.id - 1 : total;
   const rightId = active.id < total ? active.id + 1 : 1;
-  const { x: LX, y: LY } = polar(CX, CY, R, NEIGHBOR_LEFT_DEG);
-  const { x: RX, y: RY } = polar(CX, CY, R, NEIGHBOR_RIGHT_DEG);
+  const { x: LX, y: LY } = polar(CX, CY, R + NEIGHBOR_OFFSET, NEIGHBOR_LEFT_DEG);
+  const { x: RX, y: RY } = polar(CX, CY, R + NEIGHBOR_OFFSET, NEIGHBOR_RIGHT_DEG);
 
   return (
     <section className="bg-[#EDF3FF] py-14 sm:py-16 md:py-20">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8">
         {/* Header */}
         <div className="text-center">
-                            <div className="mb-2 sm:mb-4 text-[18px] font-medium text-[#2F4FA0]/80 tracking-wide flex items-center justify-center gap-2">
-                                                <Image src="/about/logo_mini.png" alt="logo" width={50} height={50} className="inline-block h-4 w-4  " />
-                                                {t("eyebrow")}
-                                              </div>
-                            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#143C99]">
-                              {t("title")}
-                            </h2>
-                          </div>
+          <div className="mb-2 sm:mb-4 text-[18px] font-medium text-[#2F4FA0]/80 tracking-wide flex items-center justify-center gap-2">
+            <Image
+              src="/about/logo_mini.png"
+              alt="Bayan Group mini logo"
+              width={50}
+              height={50}
+              className="inline-block h-4 w-4"
+            />
+            {t("eyebrow")}
+          </div>
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#143C99]">
+            {t("title")}
+          </h2>
+        </div>
+
         {/* Karta */}
         <div className="relative mt-8 overflow-hidden rounded-[28px] md:rounded-[36px] bg-[#143C99]">
           {/* Fon + overlay */}
@@ -90,7 +106,7 @@ export default function WhyUsSection() {
             {/* Strelkalar */}
             <button
               onClick={prev}
-              aria-label="Prev"
+              aria-label="Previous"
               className="absolute left-6 sm:left-8 top-10 text-white/90 hover:text-white transition"
             >
               <svg width="64" height="20" viewBox="0 0 64 20" fill="none">
@@ -109,7 +125,7 @@ export default function WhyUsSection() {
               </svg>
             </button>
 
-            {/* Markaziy badge (faqat aktiv raqam) */}
+            {/* Markazdagi badge */}
             <div className="absolute left-1/2 top-[84px] -translate-x-1/2 z-10">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/12 text-white font-bold ring-1 ring-white/25 backdrop-blur-[1px]">
                 {active.id}
@@ -130,24 +146,44 @@ export default function WhyUsSection() {
                   strokeLinecap="round"
                 />
 
-                {/* Waypoint nuqtalar (ixtiyoriy bezak) */}
+                {/* Waypoint dekor nuqtalar */}
                 {slides.map((s) => {
                   const { x, y } = polar(CX, CY, R, angleFor(s.id, total));
                   return (
-                    <circle key={s.id} cx={x} cy={y} r={4} fill="rgba(255,255,255,0.6)" />
+                    <circle
+                      key={s.id}
+                      cx={x}
+                      cy={y}
+                      r={4}
+                      fill="rgba(255,255,255,0.6)"
+                    />
                   );
                 })}
 
-                {/* Qo‘shni raqamlar: fiks burchaklarda → markaz bilan to‘qnashmaydi */}
-                <g transform={`translate(${LX},${LY})`}>
-                  <circle r={20} fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" />
-                  <text x="0" y="5" textAnchor="middle" fontSize="14" fontWeight={700} fill="rgba(255,255,255,0.95)">
+                {/* Chap qo‘shni — markazdagi badge’ga o‘xshash va arc’dan tepada */}
+                <g
+                  transform={`translate(${LX},${LY})`}
+                  onClick={prev}
+                  role="button"
+                  aria-label="Previous"
+                  style={{ cursor: "pointer" }}
+                >
+                  <circle r={BADGE_R} fill={BADGE_FILL} stroke={BADGE_RING} strokeWidth="1.5" />
+                  <text x="0" y="6" textAnchor="middle" fontSize="16" fontWeight={700} fill={BADGE_TEXT}>
                     {leftId}
                   </text>
                 </g>
-                <g transform={`translate(${RX},${RY})`}>
-                  <circle r={20} fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" />
-                  <text x="0" y="5" textAnchor="middle" fontSize="14" fontWeight={700} fill="rgba(255,255,255,0.95)">
+
+                {/* O‘ng qo‘shni — markazdagi badge’ga o‘xshash va arc’dan tepada */}
+                <g
+                  transform={`translate(${RX},${RY})`}
+                  onClick={next}
+                  role="button"
+                  aria-label="Next"
+                  style={{ cursor: "pointer" }}
+                >
+                  <circle r={BADGE_R} fill={BADGE_FILL} stroke={BADGE_RING} strokeWidth="1.5" />
+                  <text x="0" y="6" textAnchor="middle" fontSize="16" fontWeight={700} fill={BADGE_TEXT}>
                     {rightId}
                   </text>
                 </g>
@@ -186,7 +222,7 @@ export default function WhyUsSection() {
           </div>
         </div>
 
-        {/* Pastdagi pager (ixtiyoriy) */}
+        {/* Pager nuqtalar */}
         <div className="mt-4 flex items-center justify-center gap-2">
           {slides.map((s, i) => (
             <button

@@ -34,30 +34,30 @@
           "built": "Built with Next.js"
         },
         "home": {
-          "heroTitleLine1": "Care",
-          "heroTitleLine2": "for every ",
-          "heroTitleLine3": "life",
+          "heroTitleLine1": "Perfection",
+          "heroTitleLine2": "created for",
+          "heroTitleLine3": "health",
           "heroSubtitle": "Building a healthy future with quality and reliable medicines",
           "heroCta": "About our activities",
           "abouteyebrow": "About Us",
-    "abouttitle": "Bayan Group — a symbol of quality and leadership",
-    "aboutsubtitle": "Bayan Group is one of the leading companies in Uzbekistan’s pharmaceutical industry. We produce safe and effective medicines that meet international standards. Advanced technologies, qualified specialists, and strict quality control are the foundation of each of our products.",
-    "more": "Read more",
-    "statistic1": "Years of experience",
-    "statistic2": "Types of products",
-    "statistic3": "jobs",
-    "statistic4": "International partners",
-    "newseyebrow": "NEWS",
-    "newstitle": "Latest news",
-    "techeyebrow": "Technologies",
-    "techtitle": "Innovative technologies",
-    "techsubtitle": "We work to make medicines more effective through technology and scientific approaches.",
-    "techtext1": "Bayan Group operates a manufacturing process fully compliant with international GMP standards. Each product is created using advanced technologies and undergoes rigorous quality control. We continuously introduce new production lines and innovative equipment, keeping pace with the times. Our primary goal is to ensure our customers receive quality they can trust.",
-    "techtext2": "Our approach to quality is reinforced by international collaboration. Each year, we study the scientific achievements of new countries, adopting the best practices and applying them to our work. As a result, every product we make meets not only the highest quality standards but also the demands of the global market. Bayan Group is a company striving for excellence through the exchange of knowledge and experience.",
-    "items": {
-              "antibiotics": {
-                "title": "New antibiotics line launched",
-                "excerpt": "In January 2025, we launched a new generation of broad-spectrum antibiotics."
+          "abouttitle": "Bayan Group — a symbol of quality and leadership",
+          "aboutsubtitle": "Bayan Group is one of the leading companies in Uzbekistan’s pharmaceutical industry. We produce safe and effective medicines that meet international standards. Advanced technologies, qualified specialists, and strict quality control are the foundation of each of our products.",
+          "more": "Read more",
+          "statistic1": "Years of experience",
+          "statistic2": "Types of products",
+          "statistic3": "jobs",
+          "statistic4": "International partners",
+          "newseyebrow": "NEWS",
+          "newstitle": "Latest news",
+          "techeyebrow": "Technologies",
+          "techtitle": "Innovative technologies",
+          "techsubtitle": "We work to make medicines more effective through technology and scientific approaches.",
+          "techtext1": "Bayan Group operates a manufacturing process fully compliant with international GMP standards. Each product is created using advanced technologies and undergoes rigorous quality control. We continuously introduce new production lines and innovative equipment, keeping pace with the times. Our primary goal is to ensure our customers receive quality they can trust.",
+          "techtext2": "Our approach to quality is reinforced by international collaboration. Each year, we study the scientific achievements of new countries, adopting the best practices and applying them to our work. As a result, every product we make meets not only the highest quality standards but also the demands of the global market. Bayan Group is a company striving for excellence through the exchange of knowledge and experience.",
+          "items": {
+          "antibiotics": {
+          "title": "New antibiotics line launched",
+           "excerpt": "In January 2025, we launched a new generation of broad-spectrum antibiotics."
               },
               "gmp": {
                 "title": "We successfully obtained GMP certification",
@@ -144,7 +144,7 @@
                 "y2024": "In 2024, the company received an international award."
               },
 
-                "directors": {
+          "directors": {
                   "title": "Board of directors",
                   "eyebrow": "Our Directors",
                   "heading": "Board of Directors",
@@ -178,7 +178,7 @@
                     "role": "Chief Financial Officer"
                   }
 
-                },
+          },
             "technology": {
             "eyebrow": "Technology",
             "title": "Our Technologies",
@@ -210,7 +210,7 @@
               
 
             "ask":{
-              "eyebrow": "ASK A QUESTION",
+              "eyebrow": "QUESTIONS",
               "title": "Have a question?",
               "subtitle": "Fill out the form — we typically reply within one business day.",
               "name": "Full name",
@@ -236,10 +236,6 @@
               "emailErr": "The email address looks invalid."
             },
             
-
-        
-
-        
           "companies": {
             "title": "Our Companies",
             "subtitle": "Our company specializes in providing high-quality medicines in the healthcare sector",
@@ -266,7 +262,9 @@
           "news":{
             "eyebrow": "NEWS",
             "title": "Company News",
-            "subtitle": "Stay up to date with the company’s life, innovations, and strategic developments",
+            "heading": "News",
+            "subheading": "Every innovation in our company is an expression of new vision and sustainable development.",
+            "subtitle": "Stay informed about the company's life, innovations, and development trends through the latest news.",
             "pagination": { "prev": "Previous", "next": "Next" },
             "items": {
               "antibiotics": {

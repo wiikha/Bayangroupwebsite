@@ -1,7 +1,7 @@
 "use client";
 
-import { FaFacebook, FaInstagram, FaGithub, FaYoutube } from "react-icons/fa";
-import { FiScissors } from "react-icons/fi";
+import { FaFacebook, FaInstagram, FaGithub, FaYoutube, FaTelegram } from "react-icons/fa";
+import { FiLinkedin, FiScissors } from "react-icons/fi";
 import { useTranslations } from "next-intl"; // ← use next-intl for consistency
 import Link from "next/link";
 
@@ -55,10 +55,10 @@ export default function Footer() {
             <FaInstagram size={20} />
           </a>
           <a href="#" className="hover:text-gray-900" aria-label="Website">
-            <FiScissors size={20} />
+            <FiLinkedin size={20} />
           </a>
           <a href="#" className="hover:text-gray-900" aria-label="GitHub">
-            <FaGithub size={20} />
+            <FaTelegram size={20} />
           </a>
           <a href="#" className="hover:text-gray-900" aria-label="YouTube">
             <FaYoutube size={20} />

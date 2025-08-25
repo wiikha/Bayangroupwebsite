@@ -11,7 +11,7 @@ export default function   Directors() {
   return (
     <main>
       {/* HERO */}
-           <section className="relative">
+           <section className="relative bg-[#EDF3FF]">
              <div className="relative overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
                {/* Background photo */}
                <Image

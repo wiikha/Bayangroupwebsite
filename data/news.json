@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": "585211b7-e661-446a-826a-c0cde08ee624",
+      "slug": "2news",
+      "date": "2025-08-25",
+      "photo": "/uploads/news/4d3d44d4-9140-4543-99fc-fc49f38b20c0.jpg",
+      "translations": {
+        "uz": {
+          "title": "Ikkinchi yangilik",
+          "excerpt": "Ikkinchi yangilik Ikkinchi yangilik Ikkinchi yangilik",
+          "description": "Ikkinchi yangilik",
+          "header": "djkhsjdhjkhs"
+        },
+        "ru": {},
+        "en": {}
+      }
+    },
+    {
+      "id": "cc9d9eea-7e7c-49b8-810f-fe309c92f286",
+      "slug": "1news",
+      "date": "2025-08-22",
+      "photo": "/uploads/news/fb31ffbb-c1ce-432b-88ba-7749f98a00bc.jpg",
+      "translations": {
+        "uz": {
+          "title": "Birinchi yangilik",
+          "excerpt": "birinchi yangilik bayan group test sinovi uchun qilindi",
+          "description": "bir nimalar",
+          "header": "https://www.instagram.com/uzlidep/"
+        },
+        "ru": {},
+        "en": {}
+      }
+    }
+  ]
+}

@@ -284,6 +284,8 @@
         "news":{
           "eyebrow": "YANGILIKLAR",
           "title": "Kompaniya yangiliklari",
+          "heading": "Yangiliklar",
+          "subheading": "Kompaniyamizdagi har bir yangilik yangi qarash va barqaror rivojlanishning ifodasidir.",
           "subtitle": "So‘nggi yangiliklar orqali kompaniya hayoti, innovatsiyalar va rivojlanish yo‘nalishlaridan xabardor bo‘ling",
           "pagination": { "prev": "Oldingi", "next": "Keyingi" },
           "items": {
