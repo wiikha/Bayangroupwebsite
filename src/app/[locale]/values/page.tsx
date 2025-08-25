@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useRef, useState } from "react";
+
 
 export default function Ourvalues() {
   const t = useTranslations("home");

@@ -35,7 +35,7 @@ function pickLang<TMap extends Record<string, unknown>>(
   map: Record<Lang, Partial<TMap>>,
   lang: Lang
 ): Partial<TMap> {
-  return map[lang] ?? {};
+  return (map[lang] ?? {}) as Partial<TMap>;
 }
 
 function hasAnyTranslation(trs: Record<Lang, Partial<T>>): boolean {

@@ -19,21 +19,6 @@ export default function Home() {
   const t = useTranslations("home");
   const locale = useLocale() as "uz" | "ru" | "en";
 
-  // --- video controls (play/pause) ---
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [playing, setPlaying] = useState(true);
-  const togglePlay = () => {
-    const v = videoRef.current;
-    if (!v) return;
-    if (v.paused) {
-      v.play();
-      setPlaying(true);
-    } else {
-      v.pause();
-      setPlaying(false);
-    }
-  };
-
   // --- Stats (o‘zgarmagan) ---
   const stats = [
     { value: 10, label: t("statistic1") },
@@ -69,6 +54,7 @@ export default function Home() {
             width={2880}
             height={1400}
             priority
+            fetchPriority="high"
             className="hidden md:block w-full h-[80vh] object-cover"
           />
           <Image
@@ -77,6 +63,7 @@ export default function Home() {
             width={1242}
             height={2208}
             priority
+            fetchPriority="high"
             className="block md:hidden w-full h-[70vh] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0E3A9A]/40 via-[#0E3A9A]/20 to-transparent" />
