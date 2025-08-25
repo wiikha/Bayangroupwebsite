@@ -31,7 +31,7 @@ const CORS_HEADERS = {
 } as const;
 
 /* ==== Helpers ==== */
-function pickLang<TMap extends Record<string, any>>(
+function pickLang<TMap extends Record<string, unknown>>(
   map: Record<Lang, Partial<TMap>>,
   lang: Lang
 ): Partial<TMap> {
