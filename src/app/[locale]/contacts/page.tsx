@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 
 export default function Contact() {
   const t = useTranslations("contact");
@@ -86,28 +88,17 @@ export default function Contact() {
                     className="inline-flex  items-center justify-center  transition"
                     aria-label="Telegram"
                   >
-                    <Image 
-                    src="/all/Telegram.png"
-                    alt="LinkedIn"
-                    width={20}
-                    height={20}
-                    className="h-8 w-8"
-                    />
+                    <FaTelegramPlane width={20} height={20} className="h-8 w-8" />
                   </Link>
-                  {/* WhatsApp */}
+                  {/* Instagram */}
                   <Link
-                    href={t("social.whatsapp")}
+                    href={t("social.instagram")}
                     target="_blank"
                     className="inline-flex  items-center justify-center  transition"
                     aria-label="WhatsApp"
                   >
-                    <Image 
-                    src="/all/Whatsup.png"
-                    alt="LinkedIn"
-                    width={20}
-                    height={20}
-                    className="h-8 w-8"
-                    />
+                    <AiFillInstagram width={20} height={20} className="h-8 w-8" />
+                    
                   </Link>
                   {/* LinkedIn */}
                   <Link
@@ -116,13 +107,7 @@ export default function Contact() {
                     className="inline-flex  items-center justify-center  transition"
                     aria-label="LinkedIn"
                   >
-                   <Image 
-                    src="/all/linkedin.png"
-                    alt="LinkedIn"
-                    width={20}
-                    height={20}
-                    className="h-8 w-8"
-                    />
+                   <FaLinkedin width={20} height={20} className="h-8 w-8" />
                   </Link>
                 </div>
               </div>
