@@ -328,14 +328,14 @@
           "title": "Bizning Jamoamiz",
           "subtitle": "Jamoamiz — bu bilim, tajriba va bir maqsad yo‘lida birlashgan ishonchli mutaxassislar.",
           "members": {
-            "1": { "name": "Manatqulov Xushnud", "role": "Sotuv menejeri" },
-            "2": { "name": "Vahidxov Fariddin", "role": "Sifat nazoratchisi" },
-            "3": { "name": "Nurmuhammad Mamatqulov", "role": "Bosh buxgalter" },
-            "4": { "name": "Qayumov Zafar", "role": "Bosh operatsion direktor" },
-            "5": { "name": "Dadaxonov Ixtiyor", "role": "Kadrlar bo‘limi boshlig‘i (HR)" },
-            "6": { "name": "Azmetova Yekaterina", "role": "Marketolog" },
-            "7": { "name": "Musayev O‘tkir", "role": "Logistika menejeri" },
-            "8": { "name": "Sarana Vladimirova", "role": "Moliyaviy tahlilchi" }
+            "1": { "name": "Vahidxov Fariddin", "role": "Sifatni taminlsh bo'yicha direktor" },
+            "2": { "name": "Baxromov Doston", "role": "Moliya bo‘yicha menejer" },
+            "3": { "name": "Axmetova Yekaterina", "role": "Bosh buxgalter" },
+            "4": { "name": "Ravshanov Mahmudjon", "role": "HR direktor" },
+            "5": { "name": "Usmonov Ravshan", "role": "Mutaxassis shartnomaviy ishlab chiqarish" },
+            "6": { "name": "Kayumov Zafar", "role": "Tahlil va rejalashtirish bo‘yicha loyiha menejeri" },
+            "7": { "name": "Sarana Yelena", "role": "Ishlab chiqarish bo‘limi boshlig‘i" },
+            "8": { "name": "Savvateyev Anton", "role": "Distributsiya bo'yicha direktor" }
           },
           "story": {
             "heading": "Katta Oila, Katta Maqsadlar — Bayan Group",

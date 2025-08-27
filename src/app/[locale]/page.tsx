@@ -47,50 +47,57 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="relative top-0 bg-[#EDF3FF]">
-        <div className="relative overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
-          <Image
-            src="/homephoto/hero-bg-desktop.png"
-            alt="Bayan Group background"
-            width={2880}
-            height={1400}
-            priority
-            fetchPriority="high"
-            className="hidden md:block w-full h-[80vh] object-cover"
-          />
-          <Image
-            src="/homephoto/hero-bg-mobile.png"
-            alt="Bayan Group background"
-            width={1242}
-            height={2208}
-            priority
-            fetchPriority="high"
-            className="block md:hidden w-full h-[70vh] object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0E3A9A]/40 via-[#0E3A9A]/20 to-transparent" />
-          <div className="absolute w-full inset-0 flex items-center">
-            <div className="max-w-7xl mx-auto ml-auto px-4 md:px-8">
-              <div className="max-w-2xl">
-                <h1 className="text-white font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-[80px]">
-                  {t("heroTitleLine1")}
-                  <span className="block">{t("heroTitleLine2")}</span>
-                  <span className="block">{t("heroTitleLine3")}</span>
-                </h1>
-                <p className="mt-6 text-white/85 text-base sm:text-lg md:text-xl max-w-[46ch]">
-                  {t("heroSubtitle")}
-                </p>
-                <div className="mt-8">
-                  <Link
-                    href="/about"
-                    className="inline-flex items-center justify-center rounded-xl bg-white text-[#143C99] font-bold h-11 px-5 hover:bg-slate-100 transition"
-                  >
-                    {t("heroCta")}
-                  </Link>
-                </div>
-              </div>
-            </div>
+  {/* Ota konteynerga BALANDLIK bering */}
+  <div className="relative h-[70vh] md:h-[80vh] overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
+    {/* Desktop */}
+    <Image
+      src="/homephoto/hero-bg-desktop.png"
+      alt="Bayan Group background"
+      fill
+      priority
+      fetchPriority="high"
+      sizes="100vw"
+      className="hidden md:block"
+    />
+
+    {/* Mobile */}
+    <Image
+      src="/homephoto/hero-bg-mobile.png"
+      alt="Bayan Group background"
+      fill
+      priority
+      fetchPriority="high"
+      sizes="100vw"
+      className="block md:hidden object-cover"
+    />
+
+    {/* Content */}
+    <div className="absolute inset-0 flex items-center">
+      <div className="max-w-7xl mx-auto ml-auto px-4 md:px-8">
+        <div className="max-w-2xl">
+          <h1 className="text-white font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-[80px]">
+            {t("heroTitleLine1")}
+            <span className="block">{t("heroTitleLine2")}</span>
+            <span className="block">{t("heroTitleLine3")}</span>
+          </h1>
+          <p className="mt-6 text-white/85 text-base sm:text-lg md:text-xl max-w-[46ch]">
+            {t("heroSubtitle")}
+          </p>
+          <div className="mt-8">
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center rounded-xl bg-white text-[#143C99] font-bold h-11 px-5 hover:bg-slate-100 transition"
+            >
+              {t("heroCta")}
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* ABOUT + STATS (sizdagi dizayn) */}
       <section className="bg-[#EEF3FF] pb-10">

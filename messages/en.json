@@ -306,15 +306,17 @@
             "title": "Our Team",
             "subtitle": "Our team is a group of trusted professionals united by knowledge, experience and a shared mission.",
             "members": {
-              "1": { "name": "Manatqulov Khushnud", "role": "Sales Manager" },
-              "2": { "name": "Vahidov Fariddin", "role": "Quality Control Specialist" },
-              "3": { "name": "Nurmuhammad Mamatqulov", "role": "Chief Accountant" },
-              "4": { "name": "Qayumov Zafar", "role": "Chief Operating Officer" },
-              "5": { "name": "Dadaxonov Ixtiyor", "role": "Head of HR" },
-              "6": { "name": "Azmetova Yekaterina", "role": "Marketing Specialist" },
-              "7": { "name": "Musayev O‘tkir", "role": "Logistics Manager" },
-              "8": { "name": "Sarana Vladimirova", "role": "Financial Analyst" }
-            },
+             "1": { "name": "Vahidxov Fariddin", "role": "Director of Quality Assurance" },
+             "2": { "name": "Baxromov Doston", "role": "Financial Manager" },
+             "3": { "name": "Axmetova Yekaterina", "role": "Chief Accountant" },
+             "4": { "name": "Ravshanov Mahmudjon", "role": "HR Director" },
+             "5": { "name": "Usmonov Ravshan", "role": "Contract Manufacturing Specialist" },
+             "6": { "name": "Kayumov Zafar", "role": "Project Manager for Analysis and Planning" },
+             "7": { "name": "Sarana Yelena", "role": "Head of Production Department" },
+             "8": { "name": "Savvateyev Anton", "role": "Director of Distribution" }
+           },
+
+           
             "story": {
               "heading": "Big Family, Big Goals — Bayan Group",
               "body": "Bayan Group is a close-knit family that supports one another. We recognize each employee’s talent, drive, and value, because people—their knowledge and experience—are the foundation of success. That’s why we advance careers step by step through ongoing learning programs, mentoring, clear goals, and transparent performance evaluation. Ideas flow freely across the company, initiative is encouraged, and responsibility is distributed fairly. Collaboration, respect, and integrity are our core values that strengthen trust within the team. Bayan Group cultivates strong professionals: in technology, quality, marketing, and management we apply modern approaches to boost effectiveness. Every day we strive to create greater value for customers, partners, and society. We grow together and move toward sustainable success. We continually expand opportunities and conditions so that every employee can unlock their potential, acquire new skills, and deliver results that meet international standards.",

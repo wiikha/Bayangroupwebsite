@@ -7,6 +7,7 @@ import {notFound} from "next/navigation";
 import {routing} from "@/i18n/routing";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import SlowWheel from "@/components/SlowWheel";
 
 export const metadata = {
   title: "Bayan Group | Pharmaceutical Manufacturing in Uzbekistan",
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={manrope.className}>
+        <SlowWheel factor={0.4} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}

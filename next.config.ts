@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   devIndicators: false, // "Compiling/Ready" indikatorini o'chiradi
   images: {
     formats: ["image/avif", "image/webp"],
-    deviceSizes: [360, 640, 768, 1024, 1280, 1536],
+    deviceSizes: [360, 640, 768, 1024, 1280, 1536, 1920, 2048, 2560, 2880, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 };
