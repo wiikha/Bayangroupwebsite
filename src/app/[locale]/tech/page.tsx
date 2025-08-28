@@ -153,8 +153,7 @@ export default function Technology() {
           <div className="flex justify-center items-center" >
           <div className="text-center mt-2  md:w-3/4 w-10/9 text-sm sm:text-base text-[#1B2337]/80">
           <p className="mt-4 text-sm text-[#1B2337]/80">
-          Bayan Medical Yevropa va Osiyodagi yetakchi farmatsevtika kompaniyalari bilan yaqin hamkorlikda ishlaydi hamda ularning ilg‘or texnologiyalarini o‘z ishlab chiqarish jarayonlariga tatbiq etmoqda. 
-          Biz Germaniya, Fransiya, Avstriya, Yaponiya , Xitoy kabi mamlakatlarning ilg‘or uskunalari asosida avtomatlashtirilgan ishlab chiqarish liniyalarini ishga tushirdik va bu bilan O‘zbekiston farmatsevtika sanoatida zamonaviy va samarali ishlab chiqarish tizimlarini joriy etish orqali milliy salomatlik tizimini rivojlantirishga hissa qo‘shmoqdamiz
+          {t("text_first_seem")}
           </p>
           </div>
           </div>
@@ -172,11 +171,11 @@ export default function Technology() {
             </div>
             <div >
             <h3 className="md:mt-15 mt-3 md:text-[35px] text-[20px] font-semibold">1-LINIYA</h3>
-            <p className="text-sm text-[#1B2337]/80"> {t("text_second_bayan")} </p>
+            <p className="text-sm text-[#1B2337]/80"> {t("text_second_seem")} </p>
             </div>
             <div >
             <h3 className="md:mt-5 mt-3 md:text-[35px] text-[20px] font-semibold">2-LINIYA</h3>
-            <p className="text-sm text-[#1B2337]/80"> {t("text_third_bayan")} </p>
+            <p className="text-sm text-[#1B2337]/80"> {t("text_second_seem")} </p>
             </div>            
             <div>
             <Image
