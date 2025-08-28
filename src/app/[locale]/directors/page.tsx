@@ -37,7 +37,7 @@ export default function   Directors() {
                    className="mt-4 text-white/85 max-w-2xl
                               text-sm sm:text-base md:text-lg"
                  >
-                   {t("intro")}
+                   {t("subheading")}
                  </p>
                </div>
              </div>

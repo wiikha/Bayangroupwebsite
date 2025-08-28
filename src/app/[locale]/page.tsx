@@ -22,7 +22,7 @@ export default function Home() {
   // --- Stats (o‘zgarmagan) ---
   const stats = [
     { value: 10, label: t("statistic1") },
-    { value: 90, label: t("statistic2") },
+    { value: 120, label: t("statistic2") },
     { value: 1050, label: t("statistic3") },
     { value: 8, label: t("statistic4") },
   ];
