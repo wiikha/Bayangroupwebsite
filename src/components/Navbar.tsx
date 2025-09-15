@@ -262,15 +262,15 @@ export default function Navbar() {
 
           {/* Burger */}
           <button
-            className="lg:hidden p-2 -mr-1"
+            className="lg:hidden p-2 mr-1"
             aria-label="Open menu"
             onClick={toggleMobileMenu}
           >
             <Image
               src="/componentsphoto/burger.png"
               alt="Menu"
-              width={28}
-              height={28}
+              width={35}
+              height={35}
             />
           </button>
         </div>
@@ -285,7 +285,7 @@ export default function Navbar() {
           />
           <div className="relative h-full w-full bg-white">
             {/* Top row */}
-            <div className="flex items-center justify-between px-4 py-4">
+            <div className="flex items-center justify-between px-4 py-2">
               <Image
                 src="/homephoto/Logo.png"
                 alt="Bayan Group"
@@ -294,15 +294,15 @@ export default function Navbar() {
                 priority
               />
               <button
-                className="p-2"
+                className="p-2 mr-1"
                 aria-label="Close menu"
                 onClick={() => setMobileOpen(false)}
               >
                 <Image
                   src="/componentsphoto/closemenu.png"
                   alt="Close"
-                  width={28}
-                  height={28}
+                  width={35}
+                  height={35}
                 />
               </button>
             </div>

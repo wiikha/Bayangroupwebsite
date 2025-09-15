@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": "80258902-783b-4516-8b70-53ec401999d8",
+      "slug": "colleague1",
+      "order": 1,
+      "photo": "/uploads/team/37194a85-b260-4661-92e8-77bde8bac208.jpg",
+      "translations": {
+        "uz": {
+          "name": "Vaxidov Faridun",
+          "role": "Sifatni taminlsh bo'yicha direktor"
+        },
+        "ru": {},
+        "en": {}
+      }
+    }
+  ]
+}

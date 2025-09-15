@@ -63,7 +63,7 @@ export default function   Directors() {
         </div>
 
         {/* Top row: Chairperson large photo + name/role on right */}
-        <div className="mt-8 sm:mt-10 grid md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="mt-8 pl-20 pr-20 sm:mt-10 grid md:grid-cols-2 gap-6 sm:gap-8">
           <div className=" overflow-hidden bg-transparent ">
             <Image
               src="/directors/image1.png"
@@ -88,7 +88,7 @@ export default function   Directors() {
         </div>
 
         {/* Bottom row: two directors cards */}
-        <div className="mt-8 sm:mt-10 grid md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="mt-8 sm:mt-10 grid pl-20 pr-20 md:grid-cols-2 gap-6 sm:gap-8">
           {/* Card 1 */}
           <div className=" overflow-hidden">
             <Image

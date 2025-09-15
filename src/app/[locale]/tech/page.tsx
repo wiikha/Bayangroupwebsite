@@ -104,11 +104,50 @@ export default function Technology() {
           </p>
           </div>
           </div>
+          </div>
+          <div className={`${active === "bayan" ? "block" : "hidden"} mt-8`}>
+          <div className="justify-center flex items-center w-full" >
+          <Image
+            src="/technology/bayan1.png"
+            alt="Bayan Medical"
+            width={1600}
+            height={900}
+            className="rounded-2xl md:w-3/4 w-10/9 object-cover"
+          />
+          </div>
+          <div className="flex justify-center items-center" >
+          <div className="text-center mt-2  md:w-3/4 w-10/9 text-sm sm:text-base text-[#1B2337]/80">
+          <h3 className="md:mt-15 mt-3 text-black md:text-[35px] text-[20px] font-semibold"> {t("line1")} </h3>
+          <p className="mt-4 text-sm text-[#1B2337]/80">
+          {t("text_second_bayan")}
+          </p>
+          </div>
+          </div>
+          </div>
+          <div className={`${active === "bayan" ? "block" : "hidden"} mt-8`}>
+          <div className="justify-center flex items-center w-full" >
+          <Image
+            src="/technology/bayan2.png"
+            alt="Bayan Medical"
+            width={1600}
+            height={900}
+            className="rounded-2xl md:w-3/4 w-10/9 object-cover"
+          />
+          </div>
+          <div className="flex justify-center items-center" >
+          <div className="text-center mt-2  md:w-3/4 w-10/9 text-sm sm:text-base text-[#1B2337]/80">
+          <h3 className="md:mt-15 mt-3 text-black md:text-[35px] text-[20px] font-semibold"> {t("line2")} </h3>
+          <p className="mt-4 text-sm text-[#1B2337]/80">
+          {t("text_third_bayan")}
+          </p>
+          </div>
+          </div>
+          </div>
          
           
 
           {/* Two blocks */}
-          <div className="mt-8 grid md:grid-cols-2 gap-6">
+          {/* <div className="mt-8 grid md:grid-cols-2 gap-6">
             <div>
               <Image
                 src="/technology/bayan-1.png"
@@ -136,8 +175,7 @@ export default function Technology() {
               />
               
             </div>
-          </div>
-        </div>
+          </div> */}
 
         {/* SEEM container */}
         <div className={`${active === "seem" ? "block" : "hidden"} mt-8`}>
@@ -157,9 +195,47 @@ export default function Technology() {
           </p>
           </div>
           </div>
-
-          {/* Two blocks */}
-          <div className="mt-8 grid md:grid-cols-2 gap-6">
+        </div>
+        <div className={`${active === "seem" ? "block" : "hidden"} mt-8`}>
+          <div className="justify-center flex items-center w-full" >
+          <Image
+            src="/technology/seem1.png"
+            alt="SEEM"
+            width={1600}
+            height={900}
+            className="rounded-2xl md:w-3/4 w-10/9  object-cover"
+          />
+          </div>
+          <div className="flex justify-center items-center" >
+          <div className="text-center mt-2  md:w-3/4 w-10/9 text-sm sm:text-base text-[#1B2337]/80">
+          <h3 className="md:mt-15 mt-3 text-black md:text-[35px] text-[20px] font-semibold">{t("line1")} </h3>
+          <p className="mt-4 text-sm text-[#1B2337]/80">
+          {t("text_second_seem")}
+          </p>
+          </div>
+          </div>
+        </div>
+        <div className={`${active === "seem" ? "block" : "hidden"} mt-8`}>
+          <div className="justify-center flex items-center w-full" >
+          <Image
+            src="/technology/seem2.png"
+            alt="SEEM"
+            width={1600}
+            height={900}
+            className="rounded-2xl md:w-3/4 w-10/9  object-cover"
+          />
+          </div>
+          <div className="flex justify-center items-center" >
+          <div className="text-center mt-2  md:w-3/4 w-10/9 text-sm sm:text-base text-[#1B2337]/80">
+          <h3 className="md:mt-15 mt-3 text-black md:text-[35px] text-[20px] font-semibold">{t("line2")}</h3>
+          <p className="mt-4 text-sm text-[#1B2337]/80">
+          {t("text_second_seem")}
+          </p>
+          </div>
+          </div>
+        </div>
+        {/* Two blocks */}
+          {/* <div className="mt-8 grid md:grid-cols-2 gap-6">
             <div>
             <Image
                 src="/technology/seem-1.png"
@@ -187,10 +263,8 @@ export default function Technology() {
               />
               
             </div>
-          </div>
-        
-        </div>
-      </div>
+          </div> */}
+     </div>
     </section>
     </main>
   );

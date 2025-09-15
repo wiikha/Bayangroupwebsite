@@ -36,6 +36,7 @@
         "hero_title": "Biz haqimizda",
         "hero_subtitle": "Biz — sog‘liqni saqlash sohasida ishonchli yechimlar taklif etuvchi innovatsion farmatsevtika kompaniyasimiz.",
         "eyebrow": "Biz haqimizda",
+        "timeline_empty": "Hozircha yozuvlar yo'q",
         "title": {
           "line1": "Bayan Group"
         },
@@ -61,12 +62,8 @@
 
             "eyebrow_2": "Yutuqlarimiz",
             "title_2": "Bizning yutuqlarimiz",
-            "y2010": "2010-yilda kompaniya birinchi mahsulotini ishlab chiqardi.",
-            "y2011": "2011-yilda yangi ishlab chiqarish liniyasi ochildi.",
-            "y2012": "2012-yilda xalqaro sifat sertifikatlari olindi.",
-            "y2013": "2013-yilda eksport faoliyati boshlandi.",
-            "y2014": "2014-yilda yangi ilmiy laboratoriya qurildi.",
-            "y2015": "2015-yilda ishlab chiqarish quvvati 50% ga oshdi.",
+            "y2012": "2012-yilda SEEM (Samarkand England Eco-Medical) qo‘shma korxonasi qurilishi boshlandi",
+            "y2015": "2015-yilda Birinchi natriy xlor infu",
             "y2016": "2016-yilda yangi dori turlari ishlab chiqildi.",
             "y2017": "2017-yilda kompaniya yangi bozorga kirib bordi.",
             "y2018": "2018-yilda onlayn savdo platformasi ishga tushdi.",
@@ -88,7 +85,7 @@
           "intro": "Kompaniyamizni strategik yo‘nalishlarida boshqarayotgan tajribali mutaxassislar jamoasi",
           "chair": {
             "name": "Ulug‘bek Mamatqulov",
-            "role": "Direktorlar kengashi raisi"
+            "role": "Direktorlar kengashi asoschisi va raisi"
           },
           "member1": {
             "name": "Xaqberdiyev Rustam",
@@ -100,15 +97,15 @@
           },
           "member3": {
             "name": "Saidjonov Munis",
-            "role": "Bayan Medical Bosh direktori"
+            "role": "Bayan Medical Bosh ijrochi direktori"
           },
           "member4":{
             "name": "Mamatqulov Inomjon",
-            "role": "Ijrochi direktori"
+            "role": "Shartnomalar bo‘limi boshlig‘i"
           },
           "member5": {
             "name": "Rashidov Feruz",
-            "role": "SEEM Bosh direktori"
+            "role": "SEEM Bosh ijrochi direktori"
           },
           "member6": {
             "name": "Jahongir Sharipov",
@@ -148,8 +145,8 @@
             "title": "Bizning texnologiyalarimiz",
             "subtitle": "Biz texnologiyalar va ilmiy yondashuv orqali dori vositalarini yanada samarali qilish ustida ishlaymiz.",
             "heading": "Innovatsion texnologiyalar",  
-            "line1": "1-LINIYA",
-            "line2": "2-LINIYA",
+            "line1": "1-TARMOQ",
+            "line2": "2-TARMOQ",
             "subheading": "Sifatli mahsulotlar va bozorda yetakchilikning asosiy omili",
             "text_first_bayan": "BAYAN MEDICAL kompaniyasi 1 ml dan 10 ml gacha hajmdagi shisha ampulalarda steril inʼyeksion eritmalar ishlab chiqarishga ixtisoslashgan zamonaviy farmatsevtika zavodiga ega. Ishlab chiqarish quvvatlari yakuniy sterilizatsiya bilan jihozlangan ikkita avtomatlashtirilgan liniyani o‘z ichiga oladi, ularning har biri daqiqasiga 500 tagacha ampula ishlab chiqarish imkoniyatiga ega. Bir smenali ishlash sharoitida yillik ishlab chiqarish quvvati 16 milliondan ortiq o‘ramni tashkil etadi. Barcha jarayonlar GMP standartlariga muvofiq amalga oshiriladi va “A”, “C” hamda “D” toifali toza xonalarda olib boriladi. Korxona Xitoydan olib kelingan yuqori texnologiyali uskunalar bilan jihozlangan hamda sifat nazorati uchun o‘z laboratoriyalariga ega. Zamonaviy muhandislik tizimlari, suv tayyorlash uskunalari, jarayonlarni avtomatlashtirish va malakali mutaxassislar xavfsiz va samarali mahsulotning barqaror ishlab chiqarilishini taʼminlaydi.",
             "text_second_bayan": "BAYAN MEDICAL zavodining birinchi liniyasi 1 ml dan 10 ml gacha hajmdagi shisha ampulalarda steril inʼyeksion eritmalar ishlab chiqarishga mo‘ljallangan. Ishlab chiqarish jarayonlari quyidagilarni o‘z ichiga oladi: ampulalarni yuvish va depirolizatsiya qilish, eritma tayyorlash, filtratsiya, to‘ldirish, yopish, sterilizatsiya, inspeksiya va qadoqlash. Liniya “C” va “A” toifali toza xonalar majmuasida joylashgan bo‘lib, H14 sinfidagi HEPA filtrlari va bosim, harorat hamda namlikni nazorat qilish tizimiga ega ventilyatsiya uskunalari bilan jihozlangan. Barcha jarayonlar GMP standartlariga muvofiq amalga oshiriladi. Sifat nazorati har bir bosqichda olib boriladi. Xodimlar muntazam ravishda o‘qitiladi va attestatsiyadan o‘tkaziladi.",
@@ -274,7 +271,7 @@
               "seem": {
                 "tab": "SEEM",
                 "title": "SEEM",
-                "body": "2015-yilda tashkil etilgan SEEM zavodi O‘zbekistondagi yetakchi farmatsevtika ishlab chiqaruvchilardan biri bo‘lib, 26 000 m² maydonda faoliyat yuritadi va 500 dan ortiq xodimni ish bilan ta’minlaydi. Zavod infuzion eritmalar, tabletkalar va kapsulalarni ishlab chiqaradi, GMP standartlariga muvofiq ishlaydi va xalqaro bozorlar bilan faol hamkorlik qiladi."
+                "body": "2012-yilda tashkil etilgan SEEM zavodi O‘zbekistondagi yetakchi farmatsevtika ishlab chiqaruvchilardan biri bo‘lib, 26 000 m² maydonda faoliyat yuritadi va 500 dan ortiq xodimni ish bilan ta’minlaydi. Zavod infuzion eritmalar, tabletkalar va kapsulalarni ishlab chiqaradi, GMP standartlariga muvofiq ishlaydi va xalqaro bozorlar bilan faol hamkorlik qiladi."
               },
               "inso": {
                 "tab": "INSO pharm",
@@ -353,14 +350,6 @@
           "title": "Kompaniyamiz bir qismiga aylaning",
           "subtitle": "Biz sog‘liqni saqlash sohasida ishonchli yechimlar taqdim etuvchi innovatsion farmatsevtika kompaniyasimiz. Faoliyatimizda zamonaviy ishlab chiqarish texnologiyalari, sertifikatlangan mahsulotlar va xalqaro standartlarga sodiqlik muhim o‘rin tutadi.",
           "pagination": { "prev": "Oldingi", "next": "Keyingi" },
-          "jobs": {
-            "1": { "title": "Katta muhandis", "body": "Ishlab chiqarish jarayonlarini takomillashtirish, uskunalarni barqaror ishlashini ta’minlash, xavfsizlik va samaradorlik standartlarini qo‘llash.", "href": "/vacancies/senior-engineer" },
-            "2": { "title": "Yordamchi farmasevt", "body": "Dori vositalari bilan ishlash, hujjatlashtirish, sifat talablariga muvofiqlik va iste’molchilar bilan to‘g‘ri muloqot.", "href": "/vacancies/assistant-pharmacist" },
-            "3": { "title": "Katta biotexnolog", "body": "Fermentatsiya jarayonlari, steril ishlab chiqarish va ilmiy-tadqiqot loyihalarini yuritish.", "href": "/vacancies/senior-biotechnologist" },
-            "4": { "title": "Katta tadqiqotchi-olim", "body": "Laboratoriya tadqiqotlari, analitik usullarni joriy etish va validatsiya, hisobotlar tayyorlash.", "href": "/vacancies/senior-researcher" },
-            "5": { "title": "Formulyator", "body": "Dori shakllarini ishlab chiqish, yordamchi moddalarning tanlovi va barqarorlik sinovlari.", "href": "/vacancies/formulator" },
-            "6": { "title": "Regulyator", "body": "Ro‘yxatdan o‘tkazish, farmakonadzor va hujjatlarni xalqaro talablarga muvofiq tayyorlash.", "href": "/vacancies/regulatory-specialist" }
-          },
           "contact": {
             "title": "Bizga rezyume qoldiring, biz albatta siz bilan bog'lanamiz",
             "website": "www.hh.uz",
@@ -371,6 +360,15 @@
             "emailValue": "careers@bayan-group.com",
             "telegram": "Telegram",
             "telegramValue": "@careers_bayan_group_bot"
+          },
+                "detail": {
+            "home": "Bosh sahifa",
+            "vacancies": "Vakansiyalar",
+            "back": "Roʻyxatga qaytish",
+            "apply": "Ariza yuborish",
+            "mailIntro": "Assalomu alaykum.\nUshbu lavozim bo‘yicha ariza yubormoqchiman.\nLavozim:",
+           "mailFooter": "(Rezume/CV ilova qiling)",
+           "title": "Oilamizning bir qismi bo'ling"
           }
         },
         "whyus":{

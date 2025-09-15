@@ -1,3 +1,31 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": "c6b54047-644e-4d7f-917a-66d064b8f5cc",
+      "slug": "2vac",
+      "translations": {
+        "uz": {
+          "title": "Marketolog",
+          "subtitle": "Bizga kuchli yangi marketing bo'limini rivojlantirish uchun Marketolog kerak",
+          "body": "Bizga kuchli yangi marketing bo'limini rivojlantirish uchun Marketolog kerak\r\n\r\ntalablar 20-30 yosh\r\ntajriba 4 yil \r\ntil bilishi: rus ingliz o'zbek arab xitoy",
+          "href": "/vacancies/2vac"
+        },
+        "ru": {},
+        "en": {}
+      }
+    },
+    {
+      "id": "144b9f23-b690-4f77-a0d7-f3d742125872",
+      "slug": "1vac",
+      "translations": {
+        "uz": {
+          "title": "Buxgalter",
+          "body": "Birinchi vakansiya \r\nBirinchi vakansiya \r\nBirinchi vakansiya \r\nBirinchi vakansiya ",
+          "href": "/vacancies/1vac"
+        },
+        "ru": {},
+        "en": {}
+      }
+    }
+  ]
 }

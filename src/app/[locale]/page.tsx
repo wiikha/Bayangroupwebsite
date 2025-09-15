@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import WhyUs from "@/components/whyus";
 import AskQuestionSection from "@/components/ask";
+import { motion, AnimatePresence } from "framer-motion";
 
 type APINews = {
   slug: string;
@@ -26,6 +27,32 @@ export default function Home() {
     { value: 1050, label: t("statistic3") },
     { value: 8, label: t("statistic4") },
   ];
+  const images = [
+    "/homephoto/hero-bg-desktop.png",
+    "/homephoto/hero-bg-desktop2.png",
+    "/homephoto/hero-bg-desktop3.png",
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isWhiteOverlay, setIsWhiteOverlay] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // 1. Avval oq qatlamni yoqamiz
+      setIsWhiteOverlay(true);
+
+      setTimeout(() => {
+        // 2. Rasmni almashtiramiz
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+
+        // 3. Oq qatlamni yo'q qilamiz
+        setTimeout(() => {
+          setIsWhiteOverlay(false);
+        }, 400); // oq qatlam yo'qolishi
+      }, 400); // oq qatlam paydo bo'lishi
+    }, 7000); // umumiy interval 4s
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   // --- NEWS: API dan oxirgi 3 ta ---
   const [news, setNews] = useState<APINews[]>([]);
@@ -45,11 +72,11 @@ export default function Home() {
 
   return (
     <main>
-      {/* HERO */}
-      <section className="relative top-0 bg-[#EDF3FF]">
-  {/* Ota konteynerga BALANDLIK bering */}
+      
+      {/* <section className="relative top-0 bg-[#EDF3FF]">
+
   <div className="relative h-[70vh] md:h-[80vh] overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
-    {/* Desktop */}
+
     <Image
       src="/homephoto/hero-bg-desktop.png"
       alt="Bayan Group background"
@@ -60,7 +87,7 @@ export default function Home() {
       className="hidden md:block"
     />
 
-    {/* Mobile */}
+
     <Image
       src="/homephoto/hero-bg-mobile.png"
       alt="Bayan Group background"
@@ -71,7 +98,7 @@ export default function Home() {
       className="block md:hidden object-cover"
     />
 
-    {/* Content */}
+
     <div className="absolute inset-0 flex items-center">
       <div className="max-w-7xl mx-auto ml-auto px-4 md:px-8">
         <div className="max-w-2xl">
@@ -95,7 +122,83 @@ export default function Home() {
       </div>
     </div>
   </div>
-</section>
+      </section> */}
+        <section className="relative top-0 bg-[#EDF3FF]">
+      <div className="relative h-[70vh] md:h-[80vh] overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
+        
+        {/* Desktop - Rasm */}
+        <Image
+          key={currentIndex}
+          src={images[currentIndex]}
+          alt="Bayan Group background"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="hidden md:block object-cover transition-opacity duration-500"
+        />
+
+        {/* Oq qatlam animatsiyasi */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isWhiteOverlay ? 1 : 0 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          className="absolute inset-0 bg-[#BCD0FF] pointer-events-none hidden md:block"
+        />
+
+        {/* Mobile - faqat bitta rasm */}
+        <Image
+          src="/homephoto/hero-bg-mobile.png"
+          alt="Bayan Group background"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="block md:hidden object-cover"
+        />
+
+        {/* Content */}
+        <div className="absolute pl-[20vh] md:pl-[1px] inset-0 flex items-center">
+          <div className="max-w-7xl mx-auto ml-auto px-4 md:px-8">
+            <div className="max-w-2xl">
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="text-white font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-[80px]"
+              >
+                {t("heroTitleLine1")}
+                <span className="block">{t("heroTitleLine2")}</span>
+                <span className="block">{t("heroTitleLine3")}</span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.6 }}
+                className="mt-6 text-white/85 text-base sm:text-lg md:text-xl max-w-[46ch]"
+              >
+                {t("heroSubtitle")}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.9 }}
+                className="mt-8"
+              >
+                <Link
+                  href="/about"
+                  className="inline-flex items-center justify-center rounded-xl bg-white text-[#143C99] font-bold h-11 px-5 hover:bg-slate-100 transition"
+                >
+                  {t("heroCta")}
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 

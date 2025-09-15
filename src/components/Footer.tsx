@@ -60,9 +60,6 @@ export default function Footer() {
           <a href="#" className="hover:text-gray-900" aria-label="GitHub">
             <FaTelegram size={20} />
           </a>
-          <a href="#" className="hover:text-gray-900" aria-label="YouTube">
-            <FaYoutube size={20} />
-          </a>
         </div>
 
         {/* Copyright */}

@@ -106,6 +106,7 @@
             "eyebrow": "About us",
             "partnereyebrow": "Partners",
             "partnertitle": "Our Partners",
+            "timeline_empty": "No entries yet",
             "title":{
               "line1": "Bayan Group"
             },
@@ -152,7 +153,7 @@
                   "intro": "A team of experienced professionals leading the strategic directions of our company.",
                   "chair": {
                     "name": "Ulug'bek Mamatqulov",
-                    "role": "Chairman of the Board"
+                    "role": "Founder and chairman of the Board"
                   },
                   "member1": {
                     "name": "Khakberdiyev Rustam",
@@ -168,7 +169,7 @@
                   },
                   "member4": {
                     "name": "Mamatkulov Inomjon",
-                    "role": "Executive Director"
+                    "role": "Head of the Contracts Department"
                   },
                   "member5": {
                     "name": "Rashidov Feruz",
@@ -252,7 +253,7 @@
               "seem": {
                 "tab": "SEEM",
                 "title": "SEEM",
-                "body": "Founded in 2015, SEEM is one of Uzbekistan’s leading pharmaceutical manufacturers. The facility covers 26,000 m², employs more than 500 staff, and produces infusion solutions, tablets, and capsules in strict compliance with GMP standards, actively cooperating with international markets."
+                "body": "Founded in 2012, SEEM is one of Uzbekistan’s leading pharmaceutical manufacturers. The facility covers 26,000 m², employs more than 500 staff, and produces infusion solutions, tablets, and capsules in strict compliance with GMP standards, actively cooperating with international markets."
               },
               "inso": {
                 "tab": "INSO pharm",
@@ -333,14 +334,15 @@
             "title": "Become a part of our company",
             "subtitle": "We are an innovative pharmaceutical company delivering reliable healthcare solutions. We rely on modern manufacturing technologies, certified products, and strict adherence to international standards.",
             "pagination": { "prev": "Previous", "next": "Next" },
-            "jobs": {
-              "1": { "title": "Senior Engineer", "body": "Optimize production processes, ensure equipment reliability, and uphold safety and efficiency standards.", "href": "/vacancies/senior-engineer" },
-              "2": { "title": "Assistant Pharmacist", "body": "Work with medicinal products, maintain documentation, ensure quality compliance, and communicate with customers.", "href": "/vacancies/assistant-pharmacist" },
-              "3": { "title": "Senior Biotechnologist", "body": "Fermentation processes, sterile manufacturing, and participation in R&D projects.", "href": "/vacancies/senior-biotechnologist" },
-              "4": { "title": "Senior Research Scientist", "body": "Laboratory studies, implementation and validation of analytical methods, and reporting.", "href": "/vacancies/senior-researcher" },
-              "5": { "title": "Formulator", "body": "Develop dosage forms, select excipients, and run stability testing.", "href": "/vacancies/formulator" },
-              "6": { "title": "Regulatory Specialist", "body": "Registration, pharmacovigilance, and preparing documentation to international requirements.", "href": "/vacancies/regulatory-specialist" }
-            },
+            "detail": {
+      "home": "Home",
+      "vacancies": "Vacancies",
+      "back": "Back to list",
+      "apply": "Apply",
+      "mailIntro": "Hello,\nI would like to apply for this position.\nPosition:",
+      "mailFooter": "(Please attach your resume/CV)",
+      "title": "Be part of our family"
+    },
             "contact": {
               "title": "Send us your resume — we’ll get back to you",
               "website": "www.hh.uz",

@@ -1,6 +1,22 @@
 {
   "items": [
     {
+      "id": "3ddbeb4b-8538-45c4-84fd-d4ad6d59003b",
+      "slug": "3news",
+      "date": "2025-09-03",
+      "photo": "/uploads/news/e357f919-2775-41a5-b20e-26e19e7e839e.jpg",
+      "translations": {
+        "uz": {
+          "title": "3 news",
+          "excerpt": "3 newsftyftcftctyf ygvuy",
+          "description": "ygvvuv6tfvbt6v",
+          "header": "ftrftycytcyt"
+        },
+        "ru": {},
+        "en": {}
+      }
+    },
+    {
       "id": "585211b7-e661-446a-826a-c0cde08ee624",
       "slug": "2news",
       "date": "2025-08-25",

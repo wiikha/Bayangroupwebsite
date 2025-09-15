@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 
 /** --- Types --- */
 type Lang = "uz" | "ru" | "en";
@@ -20,7 +20,6 @@ function Card(props: { title: string; desc?: string; children: React.ReactNode; 
     </section>
   );
 }
-
 function Label({ children }: { children: React.ReactNode }) {
   return <label className="text-sm font-medium text-slate-700">{children}</label>;
 }
@@ -128,6 +127,7 @@ export default function AdminPage() {
   return (
     <div className="min-h-[100dvh] bg-gradient-to-b from-[#143C99] to-white">
       <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 py-8 md:py-12">
+        {/* Centered heading */}
         <header className="relative mb-8">
           <div className="text-center mt-8">
             <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white">
@@ -135,12 +135,8 @@ export default function AdminPage() {
             </h1>
             <p className="mt-1 text-white/90 text-sm">Kontentni tez va qulay boshqarish paneli</p>
           </div>
-
           {logged && (
-            <Button
-              onClick={onLogout}
-              className="absolute right-0 top-0  border border-slate-200 "
-            >
+            <Button onClick={onLogout} className="absolute right-0 top-0 bg-white text-slate-700 border border-slate-200 hover:bg-slate-50">
               Chiqish
             </Button>
           )}
@@ -151,20 +147,14 @@ export default function AdminPage() {
             <Card
               title="Tizimga kirish"
               desc="Ma'lumotlarni boshqarish paneli"
-              right={
-                <span className="inline-flex items-center rounded-lg bg-[#143C99]/5 px-2.5 py-1 text-xs font-medium text-[#143C99]">
-                  Secure
-                </span>
-              }
+              right={<span className="inline-flex items-center rounded-lg bg-[#143C99]/5 px-2.5 py-1 text-xs font-medium text-[#143C99]">Secure</span>}
             >
               <form onSubmit={onLogin} className="grid gap-4">
                 {err && <Banner kind="error">{err}</Banner>}
-
                 <div className="grid gap-2">
                   <Label>Login</Label>
                   <Input name="username" defaultValue="admin1_bayangroup" placeholder="Login" autoComplete="username" />
                 </div>
-
                 <div className="grid gap-2">
                   <Label>Parol</Label>
                   <div className="relative">
@@ -199,13 +189,9 @@ export default function AdminPage() {
                     </button>
                   </div>
                 </div>
-
                 <div className="mt-1">
-                  <Button type="submit" loading={loading} className="w-full">
-                    Kirish
-                  </Button>
+                  <Button type="submit" loading={loading} className="w-full">Kirish</Button>
                 </div>
-
                 <p className="text-center text-xs text-slate-200/90">Cookie orqali sessiya o‘rnatiladi. Xavfsiz hudud.</p>
               </form>
             </Card>
@@ -214,6 +200,8 @@ export default function AdminPage() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <NewsForm />
             <VacancyForm />
+            <TimelineAdmin />
+            <TeamForm />
           </div>
         )}
       </main>
@@ -221,7 +209,9 @@ export default function AdminPage() {
   );
 }
 
-/** --- News form + Quick Delete --- */
+/* =========================
+   NEWS
+========================= */
 function NewsForm() {
   const [preview, setPreview] = useState<string | null>(null);
   const [msg, setMsg] = useState<{ kind: "success" | "error"; text: string } | null>(null);
@@ -272,8 +262,8 @@ function NewsForm() {
             <Input type="date" name="date" required defaultValue={new Date().toISOString().slice(0, 10)} />
           </div>
           <div className="grid gap-2">
-            <Label>Link</Label>
-            <Input name="header" placeholder="Link batafsil" required />
+            <Label>Link (Instagram yoki sayt ichidagi sahifa)</Label>
+            <Input name="header" placeholder="https://instagram.com/..." required />
           </div>
           <div className="grid gap-2 sm:col-span-2">
             <Label>Title</Label>
@@ -307,13 +297,10 @@ function NewsForm() {
         </div>
 
         <div className="pt-1">
-          <Button type="submit" loading={loading}>
-            Saqlash
-          </Button>
+          <Button type="submit" loading={loading}>Saqlash</Button>
         </div>
       </form>
 
-      {/* --- Quick delete (News) --- */}
       <div className="mt-6 border-t border-slate-200/70 pt-5">
         <QuickDeleteNews />
       </div>
@@ -324,12 +311,12 @@ function NewsForm() {
 function QuickDeleteNews() {
   const [res, setRes] = useState<{ kind: "success" | "error"; text: string } | null>(null);
   const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   async function submitLang(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setRes(null);
-
-    const form = e.currentTarget as HTMLFormElement; // ✅
+    const form = formRef.current!;
     const fd = new FormData(form);
     fd.set("action", "delete");
 
@@ -339,14 +326,15 @@ function QuickDeleteNews() {
 
     if (r.ok) {
       setRes({ kind: "success", text: "O‘chirildi" });
-      form.reset(); // ✅
+      form.reset();
     } else {
       const j = await r.json().catch(() => ({}));
       setRes({ kind: "error", text: j?.error || "Topilmadi yoki xatolik" });
     }
   }
 
-  async function deleteAll(form: HTMLFormElement) {
+  async function deleteAll() {
+    const form = formRef.current!;
     const fd = new FormData(form);
     fd.set("action", "delete");
     fd.set("all", "1");
@@ -367,7 +355,7 @@ function QuickDeleteNews() {
       <div className="text-sm font-medium text-slate-700">Quick delete (News)</div>
       {res && <Banner kind={res.kind}>{res.text}</Banner>}
 
-      <form onSubmit={submitLang} className="grid gap-2 sm:grid-cols-3">
+      <form ref={formRef} onSubmit={submitLang} className="grid gap-2 sm:grid-cols-3">
         <Input name="slug" required placeholder="slug (masalan, product-launch-2025)" />
         <Select name="lang" defaultValue="uz">
           <option value="uz">uz</option>
@@ -375,13 +363,13 @@ function QuickDeleteNews() {
           <option value="en">en</option>
         </Select>
         <div className="flex gap-2">
-          <Button loading={loading} className="flex-1 bg-rose-500 text-rose-600 hover:bg-rose-700" type="submit">
+          <Button loading={loading} className="flex-1 bg-rose-600 hover:bg-rose-700" type="submit">
             Delete (lang)
           </Button>
           <button
             type="button"
-            className="flex-1 rounded-xl bg-rose-600 px-4.5 py-2.5 text-sm font-semibold text-white hover:bg-rose-700"
-            onClick={(ev) => deleteAll((ev.currentTarget as HTMLButtonElement).form!)}
+            className="flex-1 rounded-xl bg-rose-700 px-4.5 py-2.5 text-sm font-semibold text-white hover:bg-rose-800"
+            onClick={deleteAll}
           >
             Delete ALL
           </button>
@@ -389,14 +377,18 @@ function QuickDeleteNews() {
       </form>
 
       <p className="text-xs text-slate-500">
-        * <b>Delete (lang)</b> — faqat tanlangan til tarjimasini o‘chiradi. <b>Delete ALL</b> — shu slug bo‘yicha butun
-        yozuv o‘chadi.
+        * <b>Delete (lang)</b> — faqat tanlangan til tarjimasini o‘chiradi. <b>Delete ALL</b> — shu slug bo‘yicha butun yozuv o‘chadi.
       </p>
     </div>
   );
 }
 
-/** --- Vacancy form + Quick Delete --- */
+/* =========================
+   VACANCIES
+========================= */
+/* =========================
+   VACANCIES
+========================= */
 function VacancyForm() {
   const [msg, setMsg] = useState<{ kind: "success" | "error"; text: string } | null>(null);
   const [loading, setLoading] = useState(false);
@@ -410,6 +402,7 @@ function VacancyForm() {
 
     setLoading(true);
     const fd = new FormData(form);
+    // backend route.ts allaqachon subtitle ni qabul qiladi
     const r = await fetch("/api/vacancies", { method: "POST", body: fd });
     setLoading(false);
 
@@ -436,18 +429,31 @@ function VacancyForm() {
               <option value="en">English</option>
             </Select>
           </div>
+
           <div className="grid gap-2">
             <Label>Slug (noyob)</Label>
             <Input name="slug" placeholder="unique-slug" required />
           </div>
+
           <div className="grid gap-2 sm:col-span-2">
             <Label>Title</Label>
             <Input name="title" placeholder="Lavozim sarlavhasi" required />
           </div>
+
+          {/* 🔥 YANGI: Subtitle (ixtiyoriy) */}
+          <div className="grid gap-2 sm:col-span-2">
+            <Label>Subtitle (ixtiyoriy)</Label>
+            <Input
+              name="subtitle"
+              placeholder="Qisqa tavsif (1–2 jumla: masalan, 'Moliya bo‘limi uchun tajribali mutaxassis')"
+            />
+          </div>
+
           <div className="grid gap-2 sm:col-span-2">
             <Label>Body</Label>
             <Textarea name="body" rows={5} placeholder="Majburiyatlar, talablar..." required />
           </div>
+
           <div className="grid gap-2 sm:col-span-2">
             <Label>Href (ixtiyoriy)</Label>
             <Input name="href" placeholder="/vacancies/slug yoki tashqi havola" />
@@ -455,13 +461,10 @@ function VacancyForm() {
         </div>
 
         <div className="pt-1">
-          <Button type="submit" loading={loading}>
-            Saqlash
-          </Button>
+          <Button type="submit" loading={loading}>Saqlash</Button>
         </div>
       </form>
 
-      {/* --- Quick delete (Vacancies) --- */}
       <div className="mt-6 border-t border-slate-200/70 pt-5">
         <QuickDeleteVac />
       </div>
@@ -469,15 +472,16 @@ function VacancyForm() {
   );
 }
 
+
 function QuickDeleteVac() {
   const [res, setRes] = useState<{ kind: "success" | "error"; text: string } | null>(null);
   const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   async function submitLang(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setRes(null);
-
-    const form = e.currentTarget as HTMLFormElement; // ✅
+    const form = formRef.current!;
     const fd = new FormData(form);
     fd.set("action", "delete");
 
@@ -486,14 +490,15 @@ function QuickDeleteVac() {
     setLoading(false);
     if (r.ok) {
       setRes({ kind: "success", text: "O‘chirildi" });
-      form.reset(); // ✅
+      form.reset();
     } else {
       const j = await r.json().catch(() => ({}));
       setRes({ kind: "error", text: j?.error || "Topilmadi yoki xatolik" });
     }
   }
 
-  async function deleteAll(form: HTMLFormElement) {
+  async function deleteAll() {
+    const form = formRef.current!;
     const fd = new FormData(form);
     fd.set("action", "delete");
     fd.set("all", "1");
@@ -514,7 +519,7 @@ function QuickDeleteVac() {
       <div className="text-sm font-medium text-slate-700">Quick delete (Vacancies)</div>
       {res && <Banner kind={res.kind}>{res.text}</Banner>}
 
-      <form onSubmit={submitLang} className="grid gap-2 sm:grid-cols-3">
+      <form ref={formRef} onSubmit={submitLang} className="grid gap-2 sm:grid-cols-3">
         <Input name="slug" required placeholder="slug (masalan, frontend-dev)" />
         <Select name="lang" defaultValue="uz">
           <option value="uz">uz</option>
@@ -522,13 +527,13 @@ function QuickDeleteVac() {
           <option value="en">en</option>
         </Select>
         <div className="flex gap-2">
-          <Button loading={loading} className="flex-1 bg-rose-500 text-rose-700 hover:bg-rose-600" type="submit">
+          <Button loading={loading} className="flex-1 bg-rose-600 hover:bg-rose-700" type="submit">
             Delete (lang)
           </Button>
           <button
             type="button"
-            className="flex-1 rounded-xl bg-rose-600 px-4.5 py-2.5 text-sm font-semibold text-white hover:bg-rose-700"
-            onClick={(ev) => deleteAll((ev.currentTarget as HTMLButtonElement).form!)}
+            className="flex-1 rounded-xl bg-rose-700 px-4.5 py-2.5 text-sm font-semibold text-white hover:bg-rose-800"
+            onClick={deleteAll}
           >
             Delete ALL
           </button>
@@ -539,5 +544,275 @@ function QuickDeleteVac() {
         * <b>Delete (lang)</b> — faqat tanlangan til tarjimasini o‘chiradi. <b>Delete ALL</b> — shu slug bo‘yicha butun yozuv o‘chadi.
       </p>
     </div>
+  );
+}
+
+/* =========================
+   TIMELINE
+========================= */
+type TimelineRow = { year: number; text: string };
+function TimelineAdmin() {
+  const [rows, setRows] = useState<TimelineRow[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [msg, setMsg] = useState<{ kind: "success" | "error"; text: string } | null>(null);
+  const saveRef = useRef<HTMLFormElement>(null);
+  const delRef = useRef<HTMLFormElement>(null);
+
+  async function load(lang: Lang) {
+    setLoading(true);
+    setMsg(null);
+    const r = await fetch(`/api/timeline?lang=${lang}&limit=1000`, { cache: "no-store" });
+    const j = await r.json().catch(() => ({ items: [] }));
+    setRows(j.items || []);
+    setLoading(false);
+  }
+
+  async function onSave(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setMsg(null);
+    const form = saveRef.current!;
+    const fd = new FormData(form);
+    const r = await fetch("/api/timeline", { method: "POST", body: fd });
+    if (r.ok) {
+      setMsg({ kind: "success", text: "Timeline saqlandi" });
+      const lang = (fd.get("lang") as Lang) || "uz";
+      await load(lang);
+      form.reset();
+    } else {
+      const j = await r.json().catch(() => ({}));
+      setMsg({ kind: "error", text: j?.error || "Xatolik" });
+    }
+  }
+
+  async function deleteLang(all = false) {
+    setMsg(null);
+    const form = delRef.current!;
+    const fd = new FormData(form);
+    fd.set("action", "delete");
+    if (all) fd.set("all", "1");
+    const r = await fetch("/api/timeline", { method: "POST", body: fd });
+    if (r.ok) {
+      setMsg({ kind: "success", text: all ? "Yil bo‘yicha BUTUN yozuv o‘chirildi" : "Til bo‘yicha matn o‘chirildi" });
+      const lang = (fd.get("lang") as Lang) || "uz";
+      await load(lang);
+      form.reset();
+    } else {
+      const j = await r.json().catch(() => ({}));
+      setMsg({ kind: "error", text: j?.error || "Topilmadi yoki xatolik" });
+    }
+  }
+
+  return (
+    <Card title="Timeline (Achievements)" desc="Yil va til bo‘yicha yutuqlar matni">
+      <div className="grid gap-4">
+        {msg && <Banner kind={msg.kind}>{msg.text}</Banner>}
+
+        {/* Save / update */}
+        <form ref={saveRef} onSubmit={onSave} className="grid gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="grid gap-1">
+              <Label>Til</Label>
+              <Select name="lang" defaultValue="uz">
+                <option value="uz">uz</option>
+                <option value="ru">ru</option>
+                <option value="en">en</option>
+              </Select>
+            </div>
+            <div className="grid gap-1">
+              <Label>Yil</Label>
+              <Input type="number" name="year" placeholder="2026" required />
+            </div>
+            <div className="grid gap-1 sm:col-span-3">
+              <Label>Matn</Label>
+              <Textarea name="text" rows={3} placeholder="Qisqa tavsif" required />
+            </div>
+          </div>
+          <div>
+            <Button type="submit">Saqlash / Yangilash</Button>
+          </div>
+        </form>
+
+        {/* Delete */}
+        <form ref={delRef} className="grid gap-2 border-t border-slate-200/70 pt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <Input name="year" type="number" placeholder="Yil (masalan 2024)" required />
+            <Select name="lang" defaultValue="uz">
+              <option value="uz">uz</option>
+              <option value="ru">ru</option>
+              <option value="en">en</option>
+            </Select>
+            <div className="flex gap-2">
+              <Button className="bg-rose-600 hover:bg-rose-700" type="button" onClick={() => deleteLang(false)}>
+                Delete (lang)
+              </Button>
+              <button
+                type="button"
+                className="rounded-xl bg-rose-700 px-4.5 py-2.5 text-sm font-semibold text-white hover:bg-rose-800"
+                onClick={() => deleteLang(true)}
+              >
+                Delete ALL
+              </button>
+            </div>
+          </div>
+        </form>
+
+        {/* Load & list */}
+        <div className="grid gap-2 border-t border-slate-200/70 pt-4">
+          <div className="flex items-center gap-2">
+            <Select defaultValue="uz" onChange={(e) => load(e.currentTarget.value as Lang)}>
+              <option value="uz">uz</option>
+              <option value="ru">ru</option>
+              <option value="en">en</option>
+            </Select>
+            <Button onClick={() => load("uz")} type="button">Yuklash (uz)</Button>
+          </div>
+          {loading ? (
+            <p className="text-sm text-slate-500">Yuklanmoqda…</p>
+          ) : (
+            <ul className="divide-y divide-slate-200 rounded-xl border border-slate-200">
+              {rows.map((r) => (
+                <li key={r.year + "-" + r.text.slice(0, 24)} className="px-3.5 py-2.5 text-sm flex items-start gap-3">
+                  <span className="text-slate-900 font-medium">{r.year}</span>
+                  <span className="text-slate-600">{r.text}</span>
+                </li>
+              ))}
+              {rows.length === 0 && <li className="px-3.5 py-2.5 text-sm text-slate-500">Ma’lumot yo‘q</li>}
+            </ul>
+          )}
+        </div>
+      </div>
+    </Card>
+  );
+}
+
+/* =========================
+   TEAM
+========================= */
+function TeamForm() {
+  const [msg, setMsg] = useState<{ kind: "success" | "error"; text: string } | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [preview, setPreview] = useState<string | null>(null);
+  const saveRef = useRef<HTMLFormElement>(null);
+  const delRef = useRef<HTMLFormElement>(null);
+
+  async function submit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setMsg(null);
+    const form = saveRef.current!;
+    const fd = new FormData(form);
+    setLoading(true);
+    const r = await fetch("/api/team", { method: "POST", body: fd });
+    setLoading(false);
+    if (r.ok) {
+      setMsg({ kind: "success", text: "Jamoa a’zosi saqlandi" });
+      form.reset();
+      setPreview(null);
+    } else {
+      const j = await r.json().catch(() => ({}));
+      setMsg({ kind: "error", text: j?.error || "Xatolik" });
+    }
+  }
+
+  async function deleteLang(all = false) {
+    setMsg(null);
+    const form = delRef.current!;
+    const fd = new FormData(form);
+    fd.set("action", "delete");
+    if (all) fd.set("all", "1");
+    setLoading(true);
+    const r = await fetch("/api/team", { method: "POST", body: fd });
+    setLoading(false);
+    if (r.ok) {
+      setMsg({ kind: "success", text: all ? "BUTUN yozuv o‘chirildi" : "Til tarjimasi o‘chirildi" });
+      form.reset();
+    } else {
+      const j = await r.json().catch(() => ({}));
+      setMsg({ kind: "error", text: j?.error || "Topilmadi yoki xatolik" });
+    }
+  }
+
+  return (
+    <Card title="Team — qo‘shish/yangilash" desc="Til bo‘yicha alohida ism/rol kiriting">
+      <div className="grid gap-4">
+        {msg && <Banner kind={msg.kind}>{msg.text}</Banner>}
+
+        <form ref={saveRef} onSubmit={submit} encType="multipart/form-data" className="grid gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid gap-2">
+              <Label>Til</Label>
+              <Select name="lang" defaultValue="uz">
+                <option value="uz">uz</option>
+                <option value="ru">ru</option>
+                <option value="en">en</option>
+              </Select>
+            </div>
+            <div className="grid gap-2">
+              <Label>Slug (noyob)</Label>
+              <Input name="slug" placeholder="colleague1 yoki sodiq-aka" required />
+            </div>
+            <div className="grid gap-2">
+              <Label>Order</Label>
+              <Input name="order" type="number" placeholder="1000" />
+            </div>
+            <div className="grid gap-2">
+              <Label>Photo</Label>
+              <Input
+                name="photo"
+                type="file"
+                accept="image/*"
+                onChange={(e) => setPreview(e.target.files?.[0] ? URL.createObjectURL(e.target.files![0]) : null)}
+              />
+            </div>
+
+            <div className="grid gap-2 sm:col-span-2">
+              <Label>Name</Label>
+              <Input name="name" required />
+            </div>
+            <div className="grid gap-2 sm:col-span-2">
+              <Label>Role</Label>
+              <Input name="role" required />
+            </div>
+          </div>
+
+          {preview && (
+            <div className="rounded-xl border border-slate-200/80 p-1 w-48">
+              <img src={preview} alt="preview" className="h-48 w-36 object-cover rounded-lg" />
+            </div>
+          )}
+
+          <div>
+            <Button type="submit" loading={loading}>Saqlash</Button>
+          </div>
+        </form>
+
+        <div className="mt-4 border-t border-slate-200/70 pt-4">
+          <div className="text-sm font-medium text-slate-700 mb-2">Quick delete (Team)</div>
+          <form ref={delRef} className="grid gap-2 sm:grid-cols-3">
+            <Input name="slug" required placeholder="slug (masalan, colleague1)" />
+            <Select name="lang" defaultValue="">
+              <option value="">— all —</option>
+              <option value="uz">uz</option>
+              <option value="ru">ru</option>
+              <option value="en">en</option>
+            </Select>
+            <div className="flex gap-2">
+              <Button className="bg-rose-600 hover:bg-rose-700" type="button" onClick={() => deleteLang(false)}>
+                Delete (lang/all)
+              </Button>
+              <button
+                type="button"
+                className="rounded-xl bg-rose-700 px-4.5 py-2.5 text-sm font-semibold text-white hover:bg-rose-800"
+                onClick={() => deleteLang(true)}
+              >
+                Delete ALL
+              </button>
+            </div>
+          </form>
+          <p className="text-xs text-slate-500 mt-1">
+            * Lang tanlasangiz faqat o‘sha til tarjimasi o‘chadi. Lang bo‘sh bo‘lsa — butun yozuv o‘chiriladi.
+          </p>
+        </div>
+      </div>
+    </Card>
   );
 }

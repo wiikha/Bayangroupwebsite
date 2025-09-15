@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "id": "d1adf1e9-6ec4-4f2d-921b-eec6f09e740c",
+      "year": 2012,
+      "translations": {
+        "uz": {
+          "text": "Seem zavodi qurilishi boshlandi"
+        },
+        "ru": {},
+        "en": {}
+      }
+    },
+    {
+      "id": "33909058-88fa-41a1-9c9d-0bcfa3851ce9",
+      "year": 2021,
+      "translations": {
+        "uz": {
+          "text": "Bayan Medical zavodi qurildi "
+        },
+        "ru": {},
+        "en": {}
+      }
+    }
+  ]
+}
