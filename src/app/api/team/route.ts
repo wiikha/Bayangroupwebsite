@@ -27,8 +27,11 @@ const CORS = {
   "Access-Control-Allow-Headers": "Content-Type",
 };
 
-function pick<T extends Record<string, any>>(all: Record<Lang, Partial<T>>, lang: Lang) {
-  return all[lang] ?? {};
+function pick<T extends Record<string, unknown>>(
+  all: Record<Lang, Partial<T>>,
+  lang: Lang
+): Partial<T> {
+  return (all[lang] ?? {}) as Partial<T>;
 }
 
 export async function OPTIONS() {

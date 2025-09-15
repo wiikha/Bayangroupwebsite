@@ -2,13 +2,14 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 
 type Lang = "uz" | "ru" | "en";
 type Job = { id: string; slug: string; title: string; body: string; href?: string };
+type VacanciesResponse = { items?: Job[] };
 
 export default function VacancyDetail() {
   const locale = useLocale() as Lang;
@@ -24,28 +25,36 @@ export default function VacancyDetail() {
       try {
         setLoading(true);
         const r = await fetch(`/api/vacancies?lang=${locale}&slug=${slug}`, { cache: "no-store" });
-        const j = await r.json();
+        const j: VacanciesResponse = await r.json();
         if (!alive) return;
         setJob((j.items?.[0] as Job | undefined) ?? null);
       } finally {
         if (alive) setLoading(false);
       }
     })();
-    return () => { alive = false; };
+    return () => {
+      alive = false;
+    };
   }, [locale, slug]);
 
-  // i18n Fallback helper (kalit bo'lmasa yiqilmasin)
-  const tr = (key: string, def: string) => t(key as any, { fallback: def });
+  // i18n fallback helper (no 'any' cast; memoized to satisfy deps)
+  const tr = useCallback(
+    (key: string, def: string) => t(key, { fallback: def }),
+    [t]
+  );
 
   const mailto = useMemo(() => {
     if (!job) return "#";
     const title = job.title || job.slug;
     const subject = encodeURIComponent(`Application: ${title}`);
     const body = encodeURIComponent(
-      `${tr("mailIntro", "Hello,\nI would like to apply for this position.\nPosition:")} ${title}\nID: ${job.id}\nSlug: ${job.slug}\n\n---\n${tr("mailFooter", "(Please attach your resume/CV)")}`
+      `${tr("mailIntro", "Hello,\nI would like to apply for this position.\nPosition:")} ${title}\nID: ${job.id}\nSlug: ${job.slug}\n\n---\n${tr(
+        "mailFooter",
+        "(Please attach your resume/CV)"
+      )}`
     );
     return `mailto:bayanmedical@gmail.com?subject=${subject}&body=${body}`;
-  }, [job, t]);
+  }, [job, tr]);
 
   // Loading
   if (loading) {
@@ -66,28 +75,29 @@ export default function VacancyDetail() {
   }
 
   return (
-    <main className="bg-[#EDF3FF]" >
+    <main className="bg-[#EDF3FF]">
       <section className="relative bg-[#EDF3FF]">
-              <div className="relative overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
-                <Image
-                  src="/all/hero-bg.png"
-                  alt="Hero background"
-                  width={2880}
-                  height={1200}
-                  priority
-                  className="w-full h-[48vh] sm:h-[54vh] md:h-[56vh] object-cover"
-                />
-                <div className="absolute inset-0 bg-[#143C99]/50" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8">
-                  <h1 className="text-white font-extrabold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-[80px]">
-                    {t("title")}
-                  </h1>
-                </div>
-              </div>
-            </section>
+        <div className="relative overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
+          <Image
+            src="/all/hero-bg.png"
+            alt="Hero background"
+            width={2880}
+            height={1200}
+            priority
+            className="w-full h-[48vh] sm:h-[54vh] md:h-[56vh] object-cover"
+          />
+          <div className="absolute inset-0 bg-[#143C99]/50" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8">
+            <h1 className="text-white font-extrabold leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-[80px]">
+              {t("title")}
+            </h1>
+          </div>
+        </div>
+      </section>
+
       {/* White card */}
-      <section className="mx-auto bg-[#EDF3FF] w-full   max-w-4xl px-4 md:px-8 pt-20 pb-12 md:pb-16">
-        <div className="overflow-hidden rounded-2xl  border border-black/5 bg-white shadow-2xl shadow-black/10">
+      <section className="mx-auto bg-[#EDF3FF] w-full max-w-4xl px-4 md:px-8 pt-20 pb-12 md:pb-16">
+        <div className="overflow-hidden rounded-2xl border border-black/5 bg-white shadow-2xl shadow-black/10">
           {/* Header */}
           <header className="flex items-start justify-between gap-4 border-b border-slate-200 px-6 py-5 md:px-8 md:py-6">
             <div>
