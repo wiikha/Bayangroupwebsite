@@ -4,16 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import WhyUs from "@/components/whyus";
 import AskQuestionSection from "@/components/ask";
-import { motion, AnimatePresence } from "framer-motion";
 
 type APINews = {
   slug: string;
   title: string;
   excerpt: string;
-  photo: string;     // API dan keladi
-  header?: string;   // bo‘lsa — tashqi post havolasi (mas: Instagram)
+  photo: string;
+  header?: string;
 };
 
 export default function Home() {
@@ -27,34 +27,25 @@ export default function Home() {
     { value: 1050, label: t("statistic3") },
     { value: 8, label: t("statistic4") },
   ];
+
+  // --- Hero Images ---
   const images = [
     "/homephoto/hero-bg-desktop.png",
     "/homephoto/hero-bg-desktop2.png",
     "/homephoto/hero-bg-desktop3.png",
   ];
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isWhiteOverlay, setIsWhiteOverlay] = useState(false);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // --- Auto slide effect ---
   useEffect(() => {
     const interval = setInterval(() => {
-      // 1. Avval oq qatlamni yoqamiz
-      setIsWhiteOverlay(true);
-
-      setTimeout(() => {
-        // 2. Rasmni almashtiramiz
-        setCurrentIndex((prev) => (prev + 1) % images.length);
-
-        // 3. Oq qatlamni yo'q qilamiz
-        setTimeout(() => {
-          setIsWhiteOverlay(false);
-        }, 400); // oq qatlam yo'qolishi
-      }, 400); // oq qatlam paydo bo'lishi
-    }, 7000); // umumiy interval 4s
-
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 7000);
     return () => clearInterval(interval);
   }, [images.length]);
 
-  // --- NEWS: API dan oxirgi 3 ta ---
+  // --- News: API dan oxirgi 3 ta ---
   const [news, setNews] = useState<APINews[]>([]);
   const [newsLoading, setNewsLoading] = useState(true);
 
@@ -67,156 +58,124 @@ export default function Home() {
       if (alive) setNews(j.items ?? []);
       setNewsLoading(false);
     })();
-    return () => { alive = false; };
+    return () => {
+      alive = false;
+    };
   }, [locale]);
 
   return (
     <main>
-      
-      {/* <section className="relative top-0 bg-[#EDF3FF]">
-
-  <div className="relative h-[70vh] md:h-[80vh] overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
-
-    <Image
-      src="/homephoto/hero-bg-desktop.png"
-      alt="Bayan Group background"
-      fill
-      priority
-      fetchPriority="high"
-      sizes="100vw"
-      className="hidden md:block"
-    />
-
-
-    <Image
-      src="/homephoto/hero-bg-mobile.png"
-      alt="Bayan Group background"
-      fill
-      priority
-      fetchPriority="high"
-      sizes="100vw"
-      className="block md:hidden object-cover"
-    />
-
-
-    <div className="absolute inset-0 flex items-center">
-      <div className="max-w-7xl mx-auto ml-auto px-4 md:px-8">
-        <div className="max-w-2xl">
-          <h1 className="text-white font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-[80px]">
-            {t("heroTitleLine1")}
-            <span className="block">{t("heroTitleLine2")}</span>
-            <span className="block">{t("heroTitleLine3")}</span>
-          </h1>
-          <p className="mt-6 text-white/85 text-base sm:text-lg md:text-xl max-w-[46ch]">
-            {t("heroSubtitle")}
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/about"
-              className="inline-flex items-center justify-center rounded-xl bg-white text-[#143C99] font-bold h-11 px-5 hover:bg-slate-100 transition"
-            >
-              {t("heroCta")}
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-      </section> */}
-        <section className="relative top-0 bg-[#EDF3FF]">
-      <div className="relative h-[70vh] md:h-[80vh] overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
-        
-        {/* Desktop - Rasm */}
-        <Image
-          key={currentIndex}
-          src={images[currentIndex]}
-          alt="Bayan Group background"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="hidden md:block object-cover transition-opacity duration-500"
-        />
-
-        {/* Oq qatlam animatsiyasi */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isWhiteOverlay ? 1 : 0 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="absolute inset-0 bg-[#BCD0FF] pointer-events-none hidden md:block"
-        />
-
-        {/* Mobile - faqat bitta rasm */}
-        <Image
-          src="/homephoto/hero-bg-mobile.png"
-          alt="Bayan Group background"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="block md:hidden object-cover"
-        />
-
-        {/* Content */}
-        <div className="absolute pl-[20vh] md:pl-[1px] inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto ml-auto px-4 md:px-8">
-            <div className="max-w-2xl">
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="text-white font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-[80px]"
-              >
-                {t("heroTitleLine1")}
-                <span className="block">{t("heroTitleLine2")}</span>
-                <span className="block">{t("heroTitleLine3")}</span>
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.6 }}
-                className="mt-6 text-white/85 text-base sm:text-lg md:text-xl max-w-[46ch]"
-              >
-                {t("heroSubtitle")}
-              </motion.p>
-
+      {/* HERO SECTION */}
+      <section className="relative top-0 bg-[#EDF3FF]">
+        <div className="relative h-[70vh] md:h-[80vh] overflow-hidden rounded-b-[32px] md:rounded-b-[40px]">
+          {/* Desktop slideshow */}
+          <div className="absolute inset-0">
+            <AnimatePresence initial={false}>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.9 }}
-                className="mt-8"
+                key={currentIndex}
+                initial={{ x: "-100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: "100%", opacity: 0 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                className="absolute inset-0"
               >
-                <Link
-                  href="/about"
-                  className="inline-flex items-center justify-center rounded-xl bg-white text-[#143C99] font-bold h-11 px-5 hover:bg-slate-100 transition"
-                >
-                  {t("heroCta")}
-                </Link>
+                <Image
+                  src={images[currentIndex]}
+                  alt="Bayan Group background"
+                  fill
+                  priority
+                  fetchPriority="high"
+                  sizes="100vw"
+                  className="hidden md:block object-cover"
+                />
               </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Mobile uchun faqat bitta rasm */}
+          <Image
+            src="/homephoto/hero-bg-mobile.png"
+            alt="Bayan Group background"
+            fill
+            priority
+            fetchPriority="high"
+            sizes="100vw"
+            className="block md:hidden object-cover"
+          />
+
+          {/* Content */}
+          <div className="absolute inset-0 flex items-center pl-[20vh] md:pl-[1px]">
+            <div className="max-w-7xl mx-auto ml-auto px-4 md:px-8">
+              <div className="max-w-2xl">
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                  className="text-white font-extrabold leading-tight tracking-tight text-4xl sm:text-5xl md:text-[80px]"
+                >
+                  {t("heroTitleLine1")}
+                  <span className="block">{t("heroTitleLine2")}</span>
+                  <span className="block">{t("heroTitleLine3")}</span>
+                </motion.h1>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                  className="mt-6 text-white/85 text-base sm:text-lg md:text-xl max-w-[46ch]"
+                >
+                  {t("heroSubtitle")}
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.9 }}
+                  className="mt-8"
+                >
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center justify-center rounded-xl bg-white text-[#143C99] font-bold h-11 px-5 hover:bg-slate-100 transition"
+                  >
+                    {t("heroCta")}
+                  </Link>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-
-
-      {/* ABOUT + STATS (sizdagi dizayn) */}
+      {/* ABOUT + STATS */}
       <section className="bg-[#EEF3FF] pb-10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16">
           <div className="max-w-2xl ml-auto">
             <div className="mb-2 sm:mb-4 text-[18px] font-medium text-[#2F4FA0]/80 tracking-wide flex items-center gap-2">
-              <Image src="/about/logo_mini.png" alt="logo" width={50} height={50} className="inline-block h-4 w-4" />
+              <Image
+                src="/about/logo_mini.png"
+                alt="logo"
+                width={50}
+                height={50}
+                className="inline-block h-4 w-4"
+              />
               {t("abouteyebrow")}
             </div>
             <h1 className="text-[32px] leading-tight sm:text-4xl md:text-5xl font-extrabold text-[#2F4FA0]">
               {t("abouttitle")}
             </h1>
             <p className="mt-4 text-slate-700 leading-7">{t("aboutsubtitle")}</p>
-            <Link href="/aboutus" className="mt-6 inline-flex items-center gap-2 font-semibold text-[#143C99] hover:opacity-80">
+            <Link
+              href="/aboutus"
+              className="mt-6 inline-flex items-center gap-2 font-semibold text-[#143C99] hover:opacity-80"
+            >
               {t("more")}
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </Link>
@@ -233,6 +192,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Stats section */}
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 py-10 md:py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-12">
             {stats.map((it, i) => (
@@ -242,7 +202,9 @@ export default function Home() {
                   <span className="leading-none text-[42px] sm:text-[48px] md:text-[56px] font-extrabold text-slate-900">
                     {it.value}
                   </span>
-                  <span className="leading-none text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#2A55C5]">+</span>
+                  <span className="leading-none text-[24px] sm:text-[28px] md:text-[32px] font-bold text-[#2A55C5]">
+                    +
+                  </span>
                 </div>
                 <p className="mt-3 text-xs sm:text-sm md:text-base text-slate-600">{it.label}</p>
               </div>
@@ -251,83 +213,102 @@ export default function Home() {
         </div>
       </section>
 
-  
+      {/* TECHNOLOGY */}
       <section className="bg-white md:pt-20 md:pb-20 pb-10 pt-10">
-        <div className="max-w-6xl mx-auto px-4" >
-           {/* Eyebrow */}
-                <div className="mb-2 sm:mb-4 text-[18px] font-medium text-[#2F4FA0]/80 tracking-wide flex items-center justify-center gap-2">
-                         <Image src="/about/logo_mini.png" alt="logo" width={50} height={50} className="inline-block h-4 w-4  " />
-                         {t("techeyebrow")}
-                       </div>
-        
-                {/* Title */}
-                <h2 className="text-center text-[28px] sm:text-[36px] md:text-[44px] font-extrabold text-[#2F4FA0]">
-                  {t("techtitle")}
-                </h2>
-                <p className="text-center mt-2 text-sm sm:text-base text-[#1B2337]/80">
-                  {t("techsubtitle")}
-                </p>
-        <div className="mt-8 grid md:grid-cols-2 md:auto-cols-max md:justify-center md:items-center gap-6">
-                    <div>
-                    <Image
-                        src="/homephoto/tech2.png"
-                        alt="SEEM line 1"
-                        width={1400}
-                        height={900}
-                        className="rounded-2xl w-full object-cover"
-                      />
-                    </div>
-                    <div >
-                    <p className="text-sm text-[#1B2337]/80"> {t("techtext1")} </p>
-                    <Link href="/tech" className="mt-6 inline-flex items-center gap-2 font-semibold text-[#143C99] hover:opacity-80" > {t("more")} 
-         <svg
-              viewBox="0 0 24 24"
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-        </Link>
-                    </div>
-                    <div >
-                    <p className="text-sm text-[#1B2337]/80"> {t("techtext2")} </p>
-                    <Link href="/tech" className="mt-6 inline-flex items-center gap-2 font-semibold text-[#143C99] hover:opacity-80" > {t("more")} 
-         <svg
-              viewBox="0 0 24 24"
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-        </Link>
-                    </div>            
-                    <div>
-                    <Image
-                        src="/homephoto/tech1.png"
-                        alt="SEEM line 2"
-                        width={1400}
-                        height={900}
-                        className="rounded-2xl w-full object-cover"
-                      />
-                      
-                    </div>
-                  </div>
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Eyebrow */}
+          <div className="mb-2 sm:mb-4 text-[18px] font-medium text-[#2F4FA0]/80 tracking-wide flex items-center justify-center gap-2">
+            <Image
+              src="/about/logo_mini.png"
+              alt="logo"
+              width={50}
+              height={50}
+              className="inline-block h-4 w-4"
+            />
+            {t("techeyebrow")}
+          </div>
+
+          {/* Title */}
+          <h2 className="text-center text-[28px] sm:text-[36px] md:text-[44px] font-extrabold text-[#2F4FA0]">
+            {t("techtitle")}
+          </h2>
+          <p className="text-center mt-2 text-sm sm:text-base text-[#1B2337]/80">
+            {t("techsubtitle")}
+          </p>
+
+          <div className="mt-8 grid md:grid-cols-2 md:auto-cols-max md:justify-center md:items-center gap-6">
+            <div>
+              <Image
+                src="/homephoto/tech2.png"
+                alt="SEEM line 1"
+                width={1400}
+                height={900}
+                className="rounded-2xl w-full object-cover"
+              />
+            </div>
+            <div>
+              <p className="text-sm text-[#1B2337]/80"> {t("techtext1")} </p>
+              <Link
+                href="/tech"
+                className="mt-6 inline-flex items-center gap-2 font-semibold text-[#143C99] hover:opacity-80"
+              >
+                {t("more")}
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+            <div>
+              <p className="text-sm text-[#1B2337]/80"> {t("techtext2")} </p>
+              <Link
+                href="/tech"
+                className="mt-6 inline-flex items-center gap-2 font-semibold text-[#143C99] hover:opacity-80"
+              >
+                {t("more")}
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+            <div>
+              <Image
+                src="/homephoto/tech1.png"
+                alt="SEEM line 2"
+                width={1400}
+                height={900}
+                className="rounded-2xl w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
-       
       </section>
 
-      {/* Why us */}
+      {/* WHY US */}
       <WhyUs />
 
-      {/* --- KICHIK YANGILIKLAR (API: oxirgi 3 ta) --- */}
+      {/* NEWS */}
       <section className="bg-white md:pt-20 md:pb-20 pb-10 pt-10">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-2 sm:mb-4 text-[18px] font-medium text-[#2F4FA0]/80 tracking-wide flex items-center justify-center gap-2">
-            <Image src="/about/logo_mini.png" alt="logo" width={50} height={50} className="inline-block h-4 w-4" />
+            <Image
+              src="/about/logo_mini.png"
+              alt="logo"
+              width={50}
+              height={50}
+              className="inline-block h-4 w-4"
+            />
             {t("newseyebrow")}
           </div>
           <h2 className="text-center text-[28px] sm:text-[36px] md:text-[44px] font-extrabold text-[#2F4FA0]">
@@ -336,12 +317,13 @@ export default function Home() {
 
           <ul className="divide-y divide-slate-200/70 md:mt-20 mt-10 rounded-3xl p-2 sm:p-3">
             {newsLoading && <li className="p-4 text-center text-slate-500">Yuklanmoqda…</li>}
-            {!newsLoading && news.length === 0 && <li className="p-4 text-center">Hozircha yangilik yo‘q</li>}
+            {!newsLoading && news.length === 0 && (
+              <li className="p-4 text-center">Hozircha yangilik yo‘q</li>
+            )}
 
             {news.map((item) => (
               <li key={item.slug}>
                 <Link
-                  // Agar admin "header"ga IG post havolasini bergan bo‘lsa — shu yerga ochiladi
                   href={item.header || `/news/${item.slug}`}
                   target={item.header ? "_blank" : undefined}
                   rel={item.header ? "noopener noreferrer" : undefined}
@@ -358,10 +340,18 @@ export default function Home() {
                   </div>
                   <div className="min-w-0">
                     <h3 className="text-base sm:text-lg font-semibold text-slate-900">{item.title}</h3>
-                    <p className="mt-1 text-sm sm:text-base text-slate-600 line-clamp-2">{item.excerpt}</p>
+                    <p className="mt-1 text-sm sm:text-base text-slate-600 line-clamp-2">
+                      {item.excerpt}
+                    </p>
                   </div>
                   <span className="ml-auto inline-flex justify-center items-center">
-                    <svg viewBox="0 0 24 24" className="h-5 w-5 sm:h-6 sm:w-6 text-[#143C99]" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-5 w-5 sm:h-6 sm:w-6 text-[#143C99]"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
                       <path d="M5 12h14M13 5l7 7-7 7" />
                     </svg>
                   </span>
@@ -377,7 +367,13 @@ export default function Home() {
               className="inline-flex items-center gap-2 font-semibold text-[#143C99] hover:opacity-80"
             >
               {t("more")}
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
             </Link>
