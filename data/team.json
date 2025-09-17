@@ -1,32 +1,3 @@
 {
-  "items": [
-    {
-      "id": "80258902-783b-4516-8b70-53ec401999d8",
-      "slug": "colleague1",
-      "order": 1,
-      "photo": "/uploads/team/37194a85-b260-4661-92e8-77bde8bac208.jpg",
-      "translations": {
-        "uz": {
-          "name": "Vaxidov Faridun",
-          "role": "Sifatni taminlsh bo'yicha direktor"
-        },
-        "ru": {},
-        "en": {}
-      }
-    },
-    {
-      "id": "623ee0f7-8f8b-4f8c-9220-24a8443fc3f1",
-      "slug": "colleague2",
-      "order": 2,
-      "photo": "/uploads/team/16bcac3f-9b13-425d-8f93-101b104c4599.jpg",
-      "translations": {
-        "uz": {
-          "name": "Test test",
-          "role": "test test test"
-        },
-        "ru": {},
-        "en": {}
-      }
-    }
-  ]
+  "items": []
 }

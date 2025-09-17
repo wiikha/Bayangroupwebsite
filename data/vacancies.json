@@ -1,20 +1,6 @@
 {
   "items": [
     {
-      "id": "2af23b58-c460-4cdd-ae13-6ce1002eab83",
-      "slug": "vac4",
-      "translations": {
-        "uz": {
-          "title": "afjskdfhkjsb ",
-          "subtitle": "ehwbfbakj",
-          "body": "sdhbfshkdbfs\r\nsdabshbfshjdbdhs \r\njskdnfjsknfjksfks\r\nsknsdjkn\r\n",
-          "href": "/vacancies/vac4"
-        },
-        "ru": {},
-        "en": {}
-      }
-    },
-    {
       "id": "c6b54047-644e-4d7f-917a-66d064b8f5cc",
       "slug": "2vac",
       "translations": {
